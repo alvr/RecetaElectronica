@@ -45,6 +45,7 @@
         Dim acumulado = PacienteAdaptador.GetAcumulado(Paciente)
         PacienteAdaptador.ActAcumulado(acumulado + CalcularPrecio(Paciente), Paciente)
         RecetaAdaptador.ActDispensada(1, Receta)
+        RecetaAdaptador.ActMedicamento(Medicamento, Receta)
         Farmacia_MedicamentoAdaptador.ActStock(Farmacia_MedicamentoAdaptador.GetStockAlt(Medicamento, FarmaceuticoAdaptador.GetFarmacia(CodigoFarmaceutico)) - 1, FarmaceuticoAdaptador.GetFarmacia(CodigoFarmaceutico), Medicamento)
         MsgBox("Medicamento pagado y dispensado.")
         Me.Close()

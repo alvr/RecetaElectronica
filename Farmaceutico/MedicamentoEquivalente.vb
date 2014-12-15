@@ -16,7 +16,6 @@
             If code = MsgBoxResult.Yes Then
                 PagarMedicamento.Receta = Receta
                 PagarMedicamento.Medicamento = dgvMedicamentosEquivalentes.SelectedRows.Item(0).Cells(0).Value
-                RecetaAdaptador.ActMedicamento(dgvMedicamentosEquivalentes.SelectedRows.Item(0).Cells(0).Value, Receta)
                 PagarMedicamento.Show()
                 Me.Close()
             End If
