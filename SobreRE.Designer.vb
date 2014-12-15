@@ -14,14 +14,14 @@ Partial Class SobreRE
         End Try
     End Sub
 
-    Friend WithEvents TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
-    Friend WithEvents LabelProductName As System.Windows.Forms.Label
-    Friend WithEvents LabelVersion As System.Windows.Forms.Label
-    Friend WithEvents LabelCompanyName As System.Windows.Forms.Label
-    Friend WithEvents TextBoxDescription As System.Windows.Forms.TextBox
-    Friend WithEvents OKButton As System.Windows.Forms.Button
-    Friend WithEvents LabelCopyright As System.Windows.Forms.Label
+    Friend WithEvents tlpContenido As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents lpbLogo As System.Windows.Forms.PictureBox
+    Friend WithEvents lbProducto As System.Windows.Forms.Label
+    Friend WithEvents lbVersion As System.Windows.Forms.Label
+    Friend WithEvents lbCompañia As System.Windows.Forms.Label
+    Friend WithEvents tbDescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents lbCopyright As System.Windows.Forms.Label
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
@@ -32,134 +32,134 @@ Partial Class SobreRE
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SobreRE))
-        Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.LabelProductName = New System.Windows.Forms.Label()
-        Me.LabelVersion = New System.Windows.Forms.Label()
-        Me.LabelCopyright = New System.Windows.Forms.Label()
-        Me.LabelCompanyName = New System.Windows.Forms.Label()
-        Me.TextBoxDescription = New System.Windows.Forms.TextBox()
-        Me.OKButton = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel.SuspendLayout()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
+        Me.lpbLogo = New System.Windows.Forms.PictureBox()
+        Me.lbProducto = New System.Windows.Forms.Label()
+        Me.lbVersion = New System.Windows.Forms.Label()
+        Me.lbCopyright = New System.Windows.Forms.Label()
+        Me.lbCompañia = New System.Windows.Forms.Label()
+        Me.tbDescripcion = New System.Windows.Forms.TextBox()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.tlpContenido.SuspendLayout()
+        CType(Me.lpbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel
+        'tlpContenido
         '
-        Me.TableLayoutPanel.ColumnCount = 2
-        Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.0!))
-        Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.0!))
-        Me.TableLayoutPanel.Controls.Add(Me.LogoPictureBox, 0, 0)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelProductName, 1, 0)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelVersion, 1, 1)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelCopyright, 1, 2)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelCompanyName, 1, 3)
-        Me.TableLayoutPanel.Controls.Add(Me.TextBoxDescription, 1, 4)
-        Me.TableLayoutPanel.Controls.Add(Me.OKButton, 1, 5)
-        Me.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel.Location = New System.Drawing.Point(9, 9)
-        Me.TableLayoutPanel.Name = "TableLayoutPanel"
-        Me.TableLayoutPanel.RowCount = 6
-        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.Size = New System.Drawing.Size(396, 258)
-        Me.TableLayoutPanel.TabIndex = 0
+        Me.tlpContenido.ColumnCount = 2
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.0!))
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.0!))
+        Me.tlpContenido.Controls.Add(Me.lpbLogo, 0, 0)
+        Me.tlpContenido.Controls.Add(Me.lbProducto, 1, 0)
+        Me.tlpContenido.Controls.Add(Me.lbVersion, 1, 1)
+        Me.tlpContenido.Controls.Add(Me.lbCopyright, 1, 2)
+        Me.tlpContenido.Controls.Add(Me.lbCompañia, 1, 3)
+        Me.tlpContenido.Controls.Add(Me.tbDescripcion, 1, 4)
+        Me.tlpContenido.Controls.Add(Me.btnAceptar, 1, 5)
+        Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpContenido.Location = New System.Drawing.Point(9, 9)
+        Me.tlpContenido.Name = "tlpContenido"
+        Me.tlpContenido.RowCount = 6
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpContenido.Size = New System.Drawing.Size(396, 258)
+        Me.tlpContenido.TabIndex = 0
         '
-        'LogoPictureBox
+        'lpbLogo
         '
-        Me.LogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogoPictureBox.Image = Global.RecetaElectronica.My.Resources.Resources.icon
-        Me.LogoPictureBox.Location = New System.Drawing.Point(3, 3)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.TableLayoutPanel.SetRowSpan(Me.LogoPictureBox, 6)
-        Me.LogoPictureBox.Size = New System.Drawing.Size(124, 252)
-        Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.LogoPictureBox.TabIndex = 0
-        Me.LogoPictureBox.TabStop = False
+        Me.lpbLogo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lpbLogo.Image = Global.RecetaElectronica.My.Resources.Resources.icon
+        Me.lpbLogo.Location = New System.Drawing.Point(3, 3)
+        Me.lpbLogo.Name = "lpbLogo"
+        Me.tlpContenido.SetRowSpan(Me.lpbLogo, 6)
+        Me.lpbLogo.Size = New System.Drawing.Size(124, 252)
+        Me.lpbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.lpbLogo.TabIndex = 0
+        Me.lpbLogo.TabStop = False
         '
-        'LabelProductName
+        'lbProducto
         '
-        Me.LabelProductName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelProductName.Location = New System.Drawing.Point(136, 0)
-        Me.LabelProductName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelProductName.MaximumSize = New System.Drawing.Size(0, 17)
-        Me.LabelProductName.Name = "LabelProductName"
-        Me.LabelProductName.Size = New System.Drawing.Size(257, 17)
-        Me.LabelProductName.TabIndex = 0
-        Me.LabelProductName.Text = "Nombre de producto"
-        Me.LabelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbProducto.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProducto.Location = New System.Drawing.Point(136, 0)
+        Me.lbProducto.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
+        Me.lbProducto.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.lbProducto.Name = "lbProducto"
+        Me.lbProducto.Size = New System.Drawing.Size(257, 17)
+        Me.lbProducto.TabIndex = 0
+        Me.lbProducto.Text = "Nombre de producto"
+        Me.lbProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LabelVersion
+        'lbVersion
         '
-        Me.LabelVersion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelVersion.Location = New System.Drawing.Point(136, 25)
-        Me.LabelVersion.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelVersion.MaximumSize = New System.Drawing.Size(0, 17)
-        Me.LabelVersion.Name = "LabelVersion"
-        Me.LabelVersion.Size = New System.Drawing.Size(257, 17)
-        Me.LabelVersion.TabIndex = 0
-        Me.LabelVersion.Text = "Versión"
-        Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbVersion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbVersion.Location = New System.Drawing.Point(136, 25)
+        Me.lbVersion.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
+        Me.lbVersion.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.lbVersion.Name = "lbVersion"
+        Me.lbVersion.Size = New System.Drawing.Size(257, 17)
+        Me.lbVersion.TabIndex = 0
+        Me.lbVersion.Text = "Versión"
+        Me.lbVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LabelCopyright
+        'lbCopyright
         '
-        Me.LabelCopyright.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCopyright.Location = New System.Drawing.Point(136, 50)
-        Me.LabelCopyright.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelCopyright.MaximumSize = New System.Drawing.Size(0, 17)
-        Me.LabelCopyright.Name = "LabelCopyright"
-        Me.LabelCopyright.Size = New System.Drawing.Size(257, 17)
-        Me.LabelCopyright.TabIndex = 0
-        Me.LabelCopyright.Text = "Copyright"
-        Me.LabelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbCopyright.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCopyright.Location = New System.Drawing.Point(136, 50)
+        Me.lbCopyright.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
+        Me.lbCopyright.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.lbCopyright.Name = "lbCopyright"
+        Me.lbCopyright.Size = New System.Drawing.Size(257, 17)
+        Me.lbCopyright.TabIndex = 0
+        Me.lbCopyright.Text = "Copyright"
+        Me.lbCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LabelCompanyName
+        'lbCompañia
         '
-        Me.LabelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCompanyName.Location = New System.Drawing.Point(136, 75)
-        Me.LabelCompanyName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelCompanyName.MaximumSize = New System.Drawing.Size(0, 17)
-        Me.LabelCompanyName.Name = "LabelCompanyName"
-        Me.LabelCompanyName.Size = New System.Drawing.Size(257, 17)
-        Me.LabelCompanyName.TabIndex = 0
-        Me.LabelCompanyName.Text = "Nombre de la compañía"
-        Me.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbCompañia.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCompañia.Location = New System.Drawing.Point(136, 75)
+        Me.lbCompañia.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
+        Me.lbCompañia.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.lbCompañia.Name = "lbCompañia"
+        Me.lbCompañia.Size = New System.Drawing.Size(257, 17)
+        Me.lbCompañia.TabIndex = 0
+        Me.lbCompañia.Text = "Nombre de la compañía"
+        Me.lbCompañia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBoxDescription
+        'tbDescripcion
         '
-        Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxDescription.Location = New System.Drawing.Point(136, 103)
-        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
-        Me.TextBoxDescription.Multiline = True
-        Me.TextBoxDescription.Name = "TextBoxDescription"
-        Me.TextBoxDescription.ReadOnly = True
-        Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(257, 123)
-        Me.TextBoxDescription.TabIndex = 0
-        Me.TextBoxDescription.TabStop = False
-        Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
+        Me.tbDescripcion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tbDescripcion.Location = New System.Drawing.Point(136, 103)
+        Me.tbDescripcion.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
+        Me.tbDescripcion.Multiline = True
+        Me.tbDescripcion.Name = "tbDescripcion"
+        Me.tbDescripcion.ReadOnly = True
+        Me.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.tbDescripcion.Size = New System.Drawing.Size(257, 123)
+        Me.tbDescripcion.TabIndex = 0
+        Me.tbDescripcion.TabStop = False
+        Me.tbDescripcion.Text = resources.GetString("tbDescripcion.Text")
         '
-        'OKButton
+        'btnAceptar
         '
-        Me.OKButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OKButton.Location = New System.Drawing.Point(318, 232)
-        Me.OKButton.Name = "OKButton"
-        Me.OKButton.Size = New System.Drawing.Size(75, 23)
-        Me.OKButton.TabIndex = 0
-        Me.OKButton.Text = "&Aceptar"
+        Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAceptar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnAceptar.Location = New System.Drawing.Point(318, 232)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.TabIndex = 0
+        Me.btnAceptar.Text = "&Aceptar"
         '
         'SobreRE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.OKButton
+        Me.CancelButton = Me.btnAceptar
         Me.ClientSize = New System.Drawing.Size(414, 276)
-        Me.Controls.Add(Me.TableLayoutPanel)
+        Me.Controls.Add(Me.tlpContenido)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -168,9 +168,9 @@ Partial Class SobreRE
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Sobre Receta Electrónica"
-        Me.TableLayoutPanel.ResumeLayout(False)
-        Me.TableLayoutPanel.PerformLayout()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tlpContenido.ResumeLayout(False)
+        Me.tlpContenido.PerformLayout()
+        CType(Me.lpbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

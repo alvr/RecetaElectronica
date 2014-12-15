@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBoxDescription.Text" xml:space="preserve">
+  <data name="tbDescripcion.Text" xml:space="preserve">
     <value>Descripción:
 
 (En tiempo de ejecución, el texto de la etiqueta se reemplazará con la información de ensamblado de la aplicación.
