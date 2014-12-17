@@ -32,9 +32,9 @@
     <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
     <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
     <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
-    <AssemblyVersionSettings>IncrementOnDemandWithReset.IncrementOnDemand.Increment.DeltaDayStamp</AssemblyVersionSettings>
-    <AssemblyFileVersionSettings>IncrementOnDemandWithReset.IncrementOnDemand.Increment.DeltaDayStamp</AssemblyFileVersionSettings>
-    <AssemblyInfoVersionSettings>IncrementOnDemandWithReset.IncrementOnDemand.Increment.DeltaDayStamp</AssemblyInfoVersionSettings>
+    <AssemblyVersionSettings>IncrementOnDemand.Increment.DateStamp.DeltaDayStamp</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>IncrementOnDemand.Increment.DateStamp.DeltaDayStamp</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>IncrementOnDemand.Increment.DateStamp.DeltaDayStamp</AssemblyInfoVersionSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
