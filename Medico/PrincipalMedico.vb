@@ -10,10 +10,12 @@
         statusRecetas.Text = "Recetas cargadas."
         statusRecetasPaciente.Text = "No se ha cargado aún datos de la receta."
         CheckForIllegalCrossThreadCalls = False
-        SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por número tarjeta, apellidos o DNI.")
-        SendMessage(tbFiltrarRecetas.Handle, &H1501, 0, "Filtrar receta por Id, paciente o medicamento.")
+        SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por Tarjeta Sanitaria...")
+        SendMessage(tbFiltrarRecetas.Handle, &H1501, 0, "Filtrar receta por Medicamento...")
         PacientesSource.DataSource = dgvPacientes.DataSource
         RecetasSource.DataSource = dgvRecetas.DataSource
+        cbFiltroPacientes.SelectedIndex = 0
+        cbFiltroRecetas.SelectedIndex = 0
     End Sub
 
     Private Sub tsmiVerPaciente_Click(sender As Object, e As EventArgs) Handles tsmiVerPaciente.Click
@@ -76,22 +78,74 @@
     End Sub
 
     Private Sub tbFiltrarPacientes_TextChanged(sender As Object, e As EventArgs) Handles tbFiltrarPacientes.TextChanged
+        Dim opcion = cbFiltroPacientes.SelectedIndex
         If tbFiltrarPacientes.Text = "" Then
             dgvPacientes.DataSource = PacienteAdaptador.GetData()
         Else
-            PacientesSource.Filter = "Convert(NumeroTarjetaSanitaria, System.String) LIKE '%" & tbFiltrarPacientes.Text & "%' OR Apellidos LIKE '%" & tbFiltrarPacientes.Text & "%' OR DNI LIKE '%" & tbFiltrarPacientes.Text & "%'"
-            dgvPacientes.DataSource = PacientesSource.DataSource
+            Select Case opcion
+                Case 0
+                    PacientesSource.Filter = "Convert(NumeroTarjetaSanitaria, System.String) LIKE '%" & tbFiltrarPacientes.Text & "%'"
+                    dgvPacientes.DataSource = PacientesSource.DataSource
+                Case 1
+                    PacientesSource.Filter = "Nombre LIKE '%" & tbFiltrarPacientes.Text & "%'"
+                    dgvPacientes.DataSource = PacientesSource.DataSource
+                Case 2
+                    PacientesSource.Filter = "Apellidos LIKE '%" & tbFiltrarPacientes.Text & "%'"
+                    dgvPacientes.DataSource = PacientesSource.DataSource
+                Case 3
+                    PacientesSource.Filter = "DNI LIKE '%" & tbFiltrarPacientes.Text & "%'"
+                    dgvPacientes.DataSource = PacientesSource.DataSource
+                Case 4
+                    PacientesSource.Filter = "Convert(FechaNacimiento, System.String) LIKE '%" & tbFiltrarPacientes.Text & "%'"
+                    dgvPacientes.DataSource = PacientesSource.DataSource
+            End Select
         End If
     End Sub
 
+    Private Sub cbFiltroPacientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltroPacientes.SelectedIndexChanged
+        Dim opcion = cbFiltroPacientes.SelectedIndex
+        Select Case opcion
+            Case 0
+                SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por Tarjeta Sanitaria...")
+            Case 1
+                SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por Nombre...")
+            Case 2
+                SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por Apellidos...")
+            Case 3
+                SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por DNI...")
+            Case 4
+                SendMessage(tbFiltrarPacientes.Handle, &H1501, 0, "Filtrar paciente por Fecha de Nacimiento...")
+        End Select
+    End Sub
+
     Private Sub tbFiltrarRecetas_TextChanged(sender As Object, e As EventArgs) Handles tbFiltrarRecetas.TextChanged
+        Dim opcion = cbFiltroRecetas.SelectedIndex
         If tbFiltrarRecetas.Text = "" Then
             dgvRecetas.DataSource = RecetaAdaptador.GetData()
         Else
-            'RecetasSource.Filter = "Convert(Medicamento, System.String) LIKE '*" & tbFiltrarRecetas.Text & "*'"
-            'RecetasSource.Filter = String.Format("Convert(Paciente, System.String) LIKE '%{0}%'", tbFiltrarRecetas.Text)
-            dgvRecetas.DataSource = RecetaAdaptador.Filtrar(tbFiltrarRecetas.Text)
-            dgvRecetas.DataSource = RecetasSource.DataSource
+            Select Case opcion
+                Case 0
+                    RecetasSource.Filter = "Convert(Medicamento, System.String) LIKE '%" & tbFiltrarRecetas.Text & "%'"
+                    dgvRecetas.DataSource = RecetasSource.DataSource
+                Case 1
+                    RecetasSource.Filter = "Convert(Paciente, System.String) LIKE '%" & tbFiltrarRecetas.Text & "%'"
+                    dgvRecetas.DataSource = RecetasSource.DataSource
+                Case 2
+                    RecetasSource.Filter = "Convert(FechaNacimiento, System.String) LIKE '%" & tbFiltrarRecetas.Text & "%'"
+                    dgvRecetas.DataSource = RecetasSource.DataSource
+            End Select
         End If
+    End Sub
+
+    Private Sub cbFiltroRecetas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltroRecetas.SelectedIndexChanged
+        Dim opcion = cbFiltroRecetas.SelectedIndex
+        Select Case opcion
+            Case 0
+                SendMessage(tbFiltrarRecetas.Handle, &H1501, 0, "Filtrar paciente por Medicamento...")
+            Case 1
+                SendMessage(tbFiltrarRecetas.Handle, &H1501, 0, "Filtrar paciente por Paciente...")
+            Case 2
+                SendMessage(tbFiltrarRecetas.Handle, &H1501, 0, "Filtrar paciente por Fecha...")
+        End Select
     End Sub
 End Class
