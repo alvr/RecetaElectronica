@@ -85,20 +85,16 @@
             Select Case opcion
                 Case 0
                     PacientesSource.Filter = "Convert(NumeroTarjetaSanitaria, System.String) LIKE '%" & tbFiltrarPacientes.Text & "%'"
-                    dgvPacientes.DataSource = PacientesSource.DataSource
                 Case 1
                     PacientesSource.Filter = "Nombre LIKE '%" & tbFiltrarPacientes.Text & "%'"
-                    dgvPacientes.DataSource = PacientesSource.DataSource
                 Case 2
                     PacientesSource.Filter = "Apellidos LIKE '%" & tbFiltrarPacientes.Text & "%'"
-                    dgvPacientes.DataSource = PacientesSource.DataSource
                 Case 3
                     PacientesSource.Filter = "DNI LIKE '%" & tbFiltrarPacientes.Text & "%'"
-                    dgvPacientes.DataSource = PacientesSource.DataSource
                 Case 4
                     PacientesSource.Filter = "Convert(FechaNacimiento, System.String) LIKE '%" & tbFiltrarPacientes.Text & "%'"
-                    dgvPacientes.DataSource = PacientesSource.DataSource
             End Select
+            dgvPacientes.DataSource = PacientesSource.DataSource
         End If
     End Sub
 
@@ -126,14 +122,12 @@
             Select Case opcion
                 Case 0
                     RecetasSource.Filter = "Convert(Medicamento, System.String) LIKE '%" & tbFiltrarRecetas.Text & "%'"
-                    dgvRecetas.DataSource = RecetasSource.DataSource
                 Case 1
                     RecetasSource.Filter = "Convert(Paciente, System.String) LIKE '%" & tbFiltrarRecetas.Text & "%'"
-                    dgvRecetas.DataSource = RecetasSource.DataSource
                 Case 2
                     RecetasSource.Filter = "Convert(FechaNacimiento, System.String) LIKE '%" & tbFiltrarRecetas.Text & "%'"
-                    dgvRecetas.DataSource = RecetasSource.DataSource
             End Select
+            dgvRecetas.DataSource = RecetasSource.DataSource
         End If
     End Sub
 

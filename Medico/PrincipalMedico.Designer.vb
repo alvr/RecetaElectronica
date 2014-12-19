@@ -148,6 +148,7 @@ Partial Class PrincipalMedico
         Me.MedicamentoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.MedicamentoAdaptador()
         Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
         Me.RecetasMedicoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.Recetas_MedicoAdaptador()
+        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
         Me.tcMédico.SuspendLayout()
         Me.tpPacientes.SuspendLayout()
         CType(Me.dgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,6 +176,7 @@ Partial Class PrincipalMedico
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tcMédico.Controls.Add(Me.tpPacientes)
         Me.tcMédico.Controls.Add(Me.tpRecetas)
+        Me.tcMédico.ImageList = Me.IconosPestañas
         Me.tcMédico.Location = New System.Drawing.Point(0, 0)
         Me.tcMédico.Name = "tcMédico"
         Me.tcMédico.SelectedIndex = 0
@@ -186,10 +188,11 @@ Partial Class PrincipalMedico
         Me.tpPacientes.Controls.Add(Me.cbFiltroPacientes)
         Me.tpPacientes.Controls.Add(Me.tbFiltrarPacientes)
         Me.tpPacientes.Controls.Add(Me.dgvPacientes)
-        Me.tpPacientes.Location = New System.Drawing.Point(4, 22)
+        Me.tpPacientes.ImageIndex = 0
+        Me.tpPacientes.Location = New System.Drawing.Point(4, 23)
         Me.tpPacientes.Name = "tpPacientes"
         Me.tpPacientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpPacientes.Size = New System.Drawing.Size(835, 385)
+        Me.tpPacientes.Size = New System.Drawing.Size(835, 384)
         Me.tpPacientes.TabIndex = 1
         Me.tpPacientes.Text = "Pacientes"
         Me.tpPacientes.UseVisualStyleBackColor = True
@@ -208,7 +211,7 @@ Partial Class PrincipalMedico
         '
         Me.tbFiltrarPacientes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbFiltrarPacientes.Location = New System.Drawing.Point(3, 359)
+        Me.tbFiltrarPacientes.Location = New System.Drawing.Point(3, 358)
         Me.tbFiltrarPacientes.Name = "tbFiltrarPacientes"
         Me.tbFiltrarPacientes.Size = New System.Drawing.Size(697, 20)
         Me.tbFiltrarPacientes.TabIndex = 1
@@ -235,7 +238,7 @@ Partial Class PrincipalMedico
         Me.dgvPacientes.RowHeadersVisible = False
         Me.dgvPacientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPacientes.Size = New System.Drawing.Size(829, 350)
+        Me.dgvPacientes.Size = New System.Drawing.Size(829, 349)
         Me.dgvPacientes.TabIndex = 0
         '
         'NumeroTarjetaSanitariaDataGridViewTextBoxColumn
@@ -374,10 +377,11 @@ Partial Class PrincipalMedico
         'tpRecetas
         '
         Me.tpRecetas.Controls.Add(Me.TableLayoutPanel1)
-        Me.tpRecetas.Location = New System.Drawing.Point(4, 22)
+        Me.tpRecetas.ImageIndex = 1
+        Me.tpRecetas.Location = New System.Drawing.Point(4, 23)
         Me.tpRecetas.Name = "tpRecetas"
         Me.tpRecetas.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpRecetas.Size = New System.Drawing.Size(835, 385)
+        Me.tpRecetas.Size = New System.Drawing.Size(835, 384)
         Me.tpRecetas.TabIndex = 0
         Me.tpRecetas.Text = "Recetas"
         Me.tpRecetas.UseVisualStyleBackColor = True
@@ -1305,6 +1309,13 @@ Partial Class PrincipalMedico
         '
         Me.RecetasMedicoAdaptador.ClearBeforeFill = True
         '
+        'IconosPestañas
+        '
+        Me.IconosPestañas.ImageStream = CType(resources.GetObject("IconosPestañas.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.IconosPestañas.TransparentColor = System.Drawing.Color.Transparent
+        Me.IconosPestañas.Images.SetKeyName(0, "pacientes.png")
+        Me.IconosPestañas.Images.SetKeyName(1, "recetas.png")
+        '
         'PrincipalMedico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1469,5 +1480,6 @@ Partial Class PrincipalMedico
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents tbFiltrarRecetas As System.Windows.Forms.TextBox
     Friend WithEvents cbFiltroRecetas As System.Windows.Forms.ComboBox
+    Friend WithEvents IconosPestañas As System.Windows.Forms.ImageList
 
 End Class
