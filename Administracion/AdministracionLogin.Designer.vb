@@ -71,7 +71,7 @@ Partial Class AdministracionLogin
         '
         Me.contraseña.Location = New System.Drawing.Point(174, 101)
         Me.contraseña.Name = "contraseña"
-        Me.contraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.contraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.contraseña.Size = New System.Drawing.Size(220, 20)
         Me.contraseña.TabIndex = 3
         '
