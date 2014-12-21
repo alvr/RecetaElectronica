@@ -30,4 +30,21 @@
             MsgBox("Tabla de farmacias actualizada.")
         End If
     End Sub
+
+    Private Sub dgvMedicos_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvMedicos.CellFormatting
+        If e.ColumnIndex = 1 Then
+            If (Not e.Value Is Nothing) Then
+                e.Value = New String("●", e.Value.ToString().Length)
+            End If
+        End If
+    End Sub
+
+    Private Sub dgvFarmaceuticos_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvFarmaceuticos.CellFormatting
+        If e.ColumnIndex = 1 Then
+            If (Not e.Value Is Nothing) Then
+                e.Value = New String("●", e.Value.ToString().Length)
+            End If
+        End If
+    End Sub
+
 End Class
