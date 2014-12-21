@@ -236,6 +236,8 @@ Partial Class VerPaciente
         '
         'rtbHistorial
         '
+        Me.rtbHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.rtbHistorial.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.rtbHistorial.Location = New System.Drawing.Point(12, 258)
         Me.rtbHistorial.Name = "rtbHistorial"
         Me.rtbHistorial.ReadOnly = True

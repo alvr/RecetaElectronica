@@ -134,6 +134,7 @@ Partial Class PrincipalMedico
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.tbFiltrarRecetas = New System.Windows.Forms.TextBox()
         Me.cbFiltroRecetas = New System.Windows.Forms.ComboBox()
+        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
         Me.ssStatus = New System.Windows.Forms.StatusStrip()
         Me.statusPacientes = New System.Windows.Forms.ToolStripStatusLabel()
         Me.statusRecetas = New System.Windows.Forms.ToolStripStatusLabel()
@@ -148,7 +149,6 @@ Partial Class PrincipalMedico
         Me.MedicamentoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.MedicamentoAdaptador()
         Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
         Me.RecetasMedicoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.Recetas_MedicoAdaptador()
-        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
         Me.tcMédico.SuspendLayout()
         Me.tpPacientes.SuspendLayout()
         CType(Me.dgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,6 +227,7 @@ Partial Class PrincipalMedico
         Me.dgvPacientes.AutoGenerateColumns = False
         Me.dgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader
         Me.dgvPacientes.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvPacientes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
         Me.dgvPacientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DNIDataGridViewTextBoxColumn, Me.FechaNacimientoDataGridViewTextBoxColumn, Me.BaremoEconomico, Me.CronicoDataGridViewCheckBoxColumn, Me.SituacionLaboralDataGridViewTextBoxColumn, Me.HistorialDataGridViewTextBoxColumn, Me.Entidad, Me.Acumulado})
         Me.dgvPacientes.ContextMenuStrip = Me.cmsPacientes
@@ -1150,6 +1151,8 @@ Partial Class PrincipalMedico
         Me.dgvRecetas.AllowUserToResizeColumns = False
         Me.dgvRecetas.AllowUserToResizeRows = False
         Me.dgvRecetas.AutoGenerateColumns = False
+        Me.dgvRecetas.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvRecetas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PacienteDataGridViewTextBoxColumn1, Me.MedicamentoDataGridViewTextBoxColumn1, Me.FechaDataGridViewTextBoxColumn1, Me.DispensadaDataGridViewCheckBoxColumn1})
         Me.dgvRecetas.DataSource = Me.RecetaDatos
@@ -1226,6 +1229,13 @@ Partial Class PrincipalMedico
         Me.cbFiltroRecetas.Name = "cbFiltroRecetas"
         Me.cbFiltroRecetas.Size = New System.Drawing.Size(97, 21)
         Me.cbFiltroRecetas.TabIndex = 1
+        '
+        'IconosPestañas
+        '
+        Me.IconosPestañas.ImageStream = CType(resources.GetObject("IconosPestañas.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.IconosPestañas.TransparentColor = System.Drawing.Color.Transparent
+        Me.IconosPestañas.Images.SetKeyName(0, "pacientes.png")
+        Me.IconosPestañas.Images.SetKeyName(1, "recetas.png")
         '
         'ssStatus
         '
@@ -1308,13 +1318,6 @@ Partial Class PrincipalMedico
         'RecetasMedicoAdaptador
         '
         Me.RecetasMedicoAdaptador.ClearBeforeFill = True
-        '
-        'IconosPestañas
-        '
-        Me.IconosPestañas.ImageStream = CType(resources.GetObject("IconosPestañas.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.IconosPestañas.TransparentColor = System.Drawing.Color.Transparent
-        Me.IconosPestañas.Images.SetKeyName(0, "pacientes.png")
-        Me.IconosPestañas.Images.SetKeyName(1, "recetas.png")
         '
         'PrincipalMedico
         '

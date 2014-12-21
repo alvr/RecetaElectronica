@@ -230,6 +230,8 @@ Partial Class Administracion
         Me.dgvMedicos.AllowUserToResizeColumns = False
         Me.dgvMedicos.AllowUserToResizeRows = False
         Me.dgvMedicos.AutoGenerateColumns = False
+        Me.dgvMedicos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMedicos.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -336,6 +338,8 @@ Partial Class Administracion
         Me.dgvFarmaceuticos.AllowUserToResizeColumns = False
         Me.dgvFarmaceuticos.AllowUserToResizeRows = False
         Me.dgvFarmaceuticos.AutoGenerateColumns = False
+        Me.dgvFarmaceuticos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvFarmaceuticos.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -420,6 +424,8 @@ Partial Class Administracion
         Me.dgvPacientes.AllowUserToResizeColumns = False
         Me.dgvPacientes.AllowUserToResizeRows = False
         Me.dgvPacientes.AutoGenerateColumns = False
+        Me.dgvPacientes.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -537,6 +543,8 @@ Partial Class Administracion
         Me.dgvMedicamentos.AllowUserToResizeColumns = False
         Me.dgvMedicamentos.AllowUserToResizeRows = False
         Me.dgvMedicamentos.AutoGenerateColumns = False
+        Me.dgvMedicamentos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -650,6 +658,8 @@ Partial Class Administracion
         Me.dgvAmbulatorios.AllowUserToResizeColumns = False
         Me.dgvAmbulatorios.AllowUserToResizeRows = False
         Me.dgvAmbulatorios.AutoGenerateColumns = False
+        Me.dgvAmbulatorios.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvAmbulatorios.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -699,6 +709,8 @@ Partial Class Administracion
         Me.dgvFarmacias.AllowUserToResizeColumns = False
         Me.dgvFarmacias.AllowUserToResizeRows = False
         Me.dgvFarmacias.AutoGenerateColumns = False
+        Me.dgvFarmacias.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvFarmacias.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

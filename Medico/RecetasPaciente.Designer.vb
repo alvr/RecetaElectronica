@@ -68,15 +68,18 @@ Partial Class RecetasPaciente
         Me.TablaRecetas.AllowUserToResizeColumns = False
         Me.TablaRecetas.AllowUserToResizeRows = False
         Me.TablaRecetas.AutoGenerateColumns = False
+        Me.TablaRecetas.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.TablaRecetas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TablaRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TablaRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MedicamentoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.DispensadaDataGridViewTextBoxColumn})
         Me.TablaRecetas.DataSource = Me.RecetaDatos
-        Me.TablaRecetas.Location = New System.Drawing.Point(12, 12)
+        Me.TablaRecetas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TablaRecetas.Location = New System.Drawing.Point(0, 0)
         Me.TablaRecetas.Name = "TablaRecetas"
         Me.TablaRecetas.ReadOnly = True
         Me.TablaRecetas.RowHeadersVisible = False
         Me.TablaRecetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.TablaRecetas.Size = New System.Drawing.Size(517, 177)
+        Me.TablaRecetas.Size = New System.Drawing.Size(540, 189)
         Me.TablaRecetas.TabIndex = 0
         '
         'MedicamentoDataGridViewTextBoxColumn
