@@ -26,9 +26,7 @@ Partial Class SeleccionarMedicamento
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SeleccionarMedicamento))
         Me.MedicamentoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.MedicamentoAdaptador()
-        Me.TablaMedicamento = New System.Windows.Forms.DataGridView()
-        Me.MedicamentoDatos = New System.Windows.Forms.BindingSource(Me.components)
-        Me.dbRecetaElectronica = New RecetaElectronica.dbRecetaElectronica()
+        Me.dgvMedicamentos = New System.Windows.Forms.DataGridView()
         Me.CNMedicamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DenominacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,7 +37,11 @@ Partial Class SeleccionarMedicamento
         Me.NumeroEnvaseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Posologia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.TablaMedicamento, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MedicamentoDatos = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dbRecetaElectronica = New RecetaElectronica.dbRecetaElectronica()
+        Me.tbFiltrarMedicamentos = New System.Windows.Forms.TextBox()
+        Me.cbFiltroMedicamentos = New System.Windows.Forms.ComboBox()
+        CType(Me.dgvMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MedicamentoDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dbRecetaElectronica, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,13 +50,15 @@ Partial Class SeleccionarMedicamento
         '
         Me.MedicamentoAdaptador.ClearBeforeFill = True
         '
-        'TablaMedicamento
+        'dgvMedicamentos
         '
-        Me.TablaMedicamento.AllowUserToAddRows = False
-        Me.TablaMedicamento.AllowUserToDeleteRows = False
-        Me.TablaMedicamento.AllowUserToResizeColumns = False
-        Me.TablaMedicamento.AllowUserToResizeRows = False
-        Me.TablaMedicamento.AutoGenerateColumns = False
+        Me.dgvMedicamentos.AllowUserToAddRows = False
+        Me.dgvMedicamentos.AllowUserToDeleteRows = False
+        Me.dgvMedicamentos.AllowUserToResizeColumns = False
+        Me.dgvMedicamentos.AllowUserToResizeRows = False
+        Me.dgvMedicamentos.AutoGenerateColumns = False
+        Me.dgvMedicamentos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -62,28 +66,18 @@ Partial Class SeleccionarMedicamento
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.TablaMedicamento.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.TablaMedicamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TablaMedicamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CNMedicamentoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DenominacionDataGridViewTextBoxColumn, Me.GrupoEquivalenciaDataGridViewTextBoxColumn, Me.DosisDataGridViewTextBoxColumn, Me.ViaDataGridViewTextBoxColumn, Me.FormatoDataGridViewTextBoxColumn, Me.NumeroEnvaseDataGridViewTextBoxColumn, Me.Posologia, Me.Precio})
-        Me.TablaMedicamento.DataSource = Me.MedicamentoDatos
-        Me.TablaMedicamento.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TablaMedicamento.Location = New System.Drawing.Point(0, 0)
-        Me.TablaMedicamento.Name = "TablaMedicamento"
-        Me.TablaMedicamento.ReadOnly = True
-        Me.TablaMedicamento.RowHeadersVisible = False
-        Me.TablaMedicamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.TablaMedicamento.Size = New System.Drawing.Size(804, 389)
-        Me.TablaMedicamento.TabIndex = 0
-        '
-        'MedicamentoDatos
-        '
-        Me.MedicamentoDatos.DataMember = "Medicamento"
-        Me.MedicamentoDatos.DataSource = Me.dbRecetaElectronica
-        '
-        'dbRecetaElectronica
-        '
-        Me.dbRecetaElectronica.DataSetName = "dbRecetaElectronica"
-        Me.dbRecetaElectronica.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.dgvMedicamentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMedicamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CNMedicamentoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DenominacionDataGridViewTextBoxColumn, Me.GrupoEquivalenciaDataGridViewTextBoxColumn, Me.DosisDataGridViewTextBoxColumn, Me.ViaDataGridViewTextBoxColumn, Me.FormatoDataGridViewTextBoxColumn, Me.NumeroEnvaseDataGridViewTextBoxColumn, Me.Posologia, Me.Precio})
+        Me.dgvMedicamentos.DataSource = Me.MedicamentoDatos
+        Me.dgvMedicamentos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dgvMedicamentos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvMedicamentos.Name = "dgvMedicamentos"
+        Me.dgvMedicamentos.ReadOnly = True
+        Me.dgvMedicamentos.RowHeadersVisible = False
+        Me.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvMedicamentos.Size = New System.Drawing.Size(804, 351)
+        Me.dgvMedicamentos.TabIndex = 0
         '
         'CNMedicamentoDataGridViewTextBoxColumn
         '
@@ -170,24 +164,54 @@ Partial Class SeleccionarMedicamento
         Me.Precio.Name = "Precio"
         Me.Precio.ReadOnly = True
         '
+        'MedicamentoDatos
+        '
+        Me.MedicamentoDatos.DataMember = "Medicamento"
+        Me.MedicamentoDatos.DataSource = Me.dbRecetaElectronica
+        '
+        'dbRecetaElectronica
+        '
+        Me.dbRecetaElectronica.DataSetName = "dbRecetaElectronica"
+        Me.dbRecetaElectronica.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'tbFiltrarMedicamentos
+        '
+        Me.tbFiltrarMedicamentos.Location = New System.Drawing.Point(12, 357)
+        Me.tbFiltrarMedicamentos.Name = "tbFiltrarMedicamentos"
+        Me.tbFiltrarMedicamentos.Size = New System.Drawing.Size(653, 20)
+        Me.tbFiltrarMedicamentos.TabIndex = 1
+        '
+        'cbFiltroMedicamentos
+        '
+        Me.cbFiltroMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbFiltroMedicamentos.FormattingEnabled = True
+        Me.cbFiltroMedicamentos.Items.AddRange(New Object() {"Número Medicamento", "Nombre Medicamento"})
+        Me.cbFiltroMedicamentos.Location = New System.Drawing.Point(671, 357)
+        Me.cbFiltroMedicamentos.Name = "cbFiltroMedicamentos"
+        Me.cbFiltroMedicamentos.Size = New System.Drawing.Size(121, 21)
+        Me.cbFiltroMedicamentos.TabIndex = 2
+        '
         'SeleccionarMedicamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(804, 389)
-        Me.Controls.Add(Me.TablaMedicamento)
+        Me.Controls.Add(Me.cbFiltroMedicamentos)
+        Me.Controls.Add(Me.tbFiltrarMedicamentos)
+        Me.Controls.Add(Me.dgvMedicamentos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SeleccionarMedicamento"
         Me.Text = "Seleccionar Medicamento"
-        CType(Me.TablaMedicamento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MedicamentoDatos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dbRecetaElectronica, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents MedicamentoAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.MedicamentoAdaptador
-    Friend WithEvents TablaMedicamento As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvMedicamentos As System.Windows.Forms.DataGridView
     Friend WithEvents MedicamentoDatos As System.Windows.Forms.BindingSource
     Friend WithEvents dbRecetaElectronica As RecetaElectronica.dbRecetaElectronica
     Friend WithEvents CNMedicamentoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -200,4 +224,6 @@ Partial Class SeleccionarMedicamento
     Friend WithEvents NumeroEnvaseDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Posologia As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tbFiltrarMedicamentos As System.Windows.Forms.TextBox
+    Friend WithEvents cbFiltroMedicamentos As System.Windows.Forms.ComboBox
 End Class
