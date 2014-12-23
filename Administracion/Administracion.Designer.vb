@@ -245,6 +245,7 @@ Partial Class Administracion
         Me.dgvMedicos.DataSource = Me.MedicoDatos
         Me.dgvMedicos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvMedicos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvMedicos.MultiSelect = False
         Me.dgvMedicos.Name = "dgvMedicos"
         Me.dgvMedicos.RowHeadersVisible = False
         Me.dgvMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -353,6 +354,7 @@ Partial Class Administracion
         Me.dgvFarmaceuticos.DataSource = Me.FarmaceuticoDatos
         Me.dgvFarmaceuticos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvFarmaceuticos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvFarmaceuticos.MultiSelect = False
         Me.dgvFarmaceuticos.Name = "dgvFarmaceuticos"
         Me.dgvFarmaceuticos.RowHeadersVisible = False
         Me.dgvFarmaceuticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -439,6 +441,7 @@ Partial Class Administracion
         Me.dgvPacientes.DataSource = Me.PacienteDatos
         Me.dgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvPacientes.Location = New System.Drawing.Point(0, 0)
+        Me.dgvPacientes.MultiSelect = False
         Me.dgvPacientes.Name = "dgvPacientes"
         Me.dgvPacientes.RowHeadersVisible = False
         Me.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -558,6 +561,7 @@ Partial Class Administracion
         Me.dgvMedicamentos.DataSource = Me.MedicamentoDatos
         Me.dgvMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvMedicamentos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvMedicamentos.MultiSelect = False
         Me.dgvMedicamentos.Name = "dgvMedicamentos"
         Me.dgvMedicamentos.RowHeadersVisible = False
         Me.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -673,6 +677,7 @@ Partial Class Administracion
         Me.dgvAmbulatorios.DataSource = Me.AmbulatorioDatos
         Me.dgvAmbulatorios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvAmbulatorios.Location = New System.Drawing.Point(0, 0)
+        Me.dgvAmbulatorios.MultiSelect = False
         Me.dgvAmbulatorios.Name = "dgvAmbulatorios"
         Me.dgvAmbulatorios.RowHeadersVisible = False
         Me.dgvAmbulatorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -724,6 +729,7 @@ Partial Class Administracion
         Me.dgvFarmacias.DataSource = Me.FarmaciaDatos
         Me.dgvFarmacias.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvFarmacias.Location = New System.Drawing.Point(0, 0)
+        Me.dgvFarmacias.MultiSelect = False
         Me.dgvFarmacias.Name = "dgvFarmacias"
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control

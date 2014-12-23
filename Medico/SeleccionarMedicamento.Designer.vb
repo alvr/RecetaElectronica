@@ -72,6 +72,7 @@ Partial Class SeleccionarMedicamento
         Me.dgvMedicamentos.DataSource = Me.MedicamentoDatos
         Me.dgvMedicamentos.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvMedicamentos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvMedicamentos.MultiSelect = False
         Me.dgvMedicamentos.Name = "dgvMedicamentos"
         Me.dgvMedicamentos.ReadOnly = True
         Me.dgvMedicamentos.RowHeadersVisible = False

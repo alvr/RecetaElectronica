@@ -75,6 +75,7 @@ Partial Class RecetasPaciente
         Me.TablaRecetas.DataSource = Me.RecetaDatos
         Me.TablaRecetas.Dock = System.Windows.Forms.DockStyle.Top
         Me.TablaRecetas.Location = New System.Drawing.Point(0, 0)
+        Me.TablaRecetas.MultiSelect = False
         Me.TablaRecetas.Name = "TablaRecetas"
         Me.TablaRecetas.ReadOnly = True
         Me.TablaRecetas.RowHeadersVisible = False
