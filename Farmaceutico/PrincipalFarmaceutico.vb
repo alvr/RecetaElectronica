@@ -1,14 +1,19 @@
 ﻿Public Class PrincipalFarmaceutico
 
+    Protected Friend StockColumnas() As String = {"", "Medicamento", "Stock", "", "", "", "", "Nombre", "Denominación", "Grupo de Equivalencia", _
+    "Dosis", "Vía", "Formato", "Número de Envase", "Precio"}
+
     Private Sub PrincipalFarmaceutico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgvStock.DataSource = Farmacia_MedicamentoAdaptador.GetMedicamentoFarmacia(Util.CodigoFarmaceutico)
+        dgvStock.DataSource = Farmacia_MedicamentoAdaptador.GetMedicamentos(CodigoFarmaceutico)
         dgvStock.Columns(0).Visible = False
         dgvStock.Columns(3).Visible = False
         dgvStock.Columns(4).Visible = False
         dgvStock.Columns(5).Visible = False
         dgvStock.Columns(6).Visible = False
-        pDatosReceta.Visible = False
-        CheckForIllegalCrossThreadCalls = False
+
+        For i As Integer = 0 To dgvStock.ColumnCount - 1
+            dgvStock.Columns(i).HeaderText = StockColumnas(i)
+        Next
     End Sub
 
     Private Sub btnComprobar_Click(sender As Object, e As EventArgs) Handles btnComprobar.Click
@@ -19,9 +24,9 @@
         ElseIf Not RecetaAdaptador.GetDispensada(tbCodReceta.Text) Then
             tbCodReceta.Enabled = False
             tsslDatosReceta.Text = "Cargando datos de la receta..."
-            If Not bgWorker.IsBusy Then
-                bgWorker.RunWorkerAsync()
-            End If
+            ActualizarDatos(tbCodReceta.Text)
+            pDatosReceta.Visible = True
+            tsslDatosReceta.Text = "Datos de la receta cargados."
         End If
     End Sub
 
@@ -56,26 +61,17 @@
         dtpFechaNacimiento.Value = PacienteAdaptador.GetFechaNacimiento(CodPaciente)
         cbCronico.Checked = PacienteAdaptador.GetCronico(CodPaciente).Value
         tbBaremo.Text = PacienteAdaptador.GetBaremo(CodPaciente)
-        tbSituacionLab.Text = PacienteAdaptador.GetSituacion(CodPaciente)
+        tbSituacion.Text = PacienteAdaptador.GetSituacion(CodPaciente)
         rtbHistorial.Text = PacienteAdaptador.GetHistorial(CodPaciente)
 
-        tbMedicamento.Text = CodMedicamento
-        tbNombreMedicamento.Text = MedicamentoAdaptador.GetNombre(CodMedicamento)
-        tbGrupoEquivalencia.Text = MedicamentoAdaptador.GetEquivalencia(CodMedicamento)
+        tbNumMedicamento.Text = CodMedicamento
+        tbMedicamento.Text = MedicamentoAdaptador.GetNombre(CodMedicamento)
+        tbEquivalencia.Text = MedicamentoAdaptador.GetEquivalencia(CodMedicamento)
         tbDenominacion.Text = MedicamentoAdaptador.GetDenominacion(CodMedicamento)
         tbDosis.Text = MedicamentoAdaptador.GetDosis(CodMedicamento)
         tbVia.Text = MedicamentoAdaptador.GetVia(CodMedicamento)
         tbFormato.Text = MedicamentoAdaptador.GetFormato(CodMedicamento)
-        tbNumeroEnvase.Text = MedicamentoAdaptador.GetEnvase(CodMedicamento)
-    End Sub
-
-    Private Sub bgWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles bgWorker.DoWork
-        ActualizarDatos(tbCodReceta.Text)
-        pDatosReceta.Visible = True
-    End Sub
-
-    Private Sub bgWorker_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles bgWorker.RunWorkerCompleted
-        tsslDatosReceta.Text = "Datos de la receta cargados."
+        tbEnvase.Text = MedicamentoAdaptador.GetEnvase(CodMedicamento)
     End Sub
 
     Private Sub btnAbrirNavegador_Click(sender As Object, e As EventArgs) Handles btnAbrirNavegador.Click
