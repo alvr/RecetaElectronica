@@ -30,6 +30,7 @@ Partial Class MedicamentoEquivalente
         Me.Farmacia_MedicamentoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.Farmacia_MedicamentoAdaptador()
         Me.FarmaceuticoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.FarmaceuticoAdaptador()
         Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
+        Me.cbFiltroMedicamentos = New System.Windows.Forms.ComboBox()
         CType(Me.dgvMedicamentosEquivalentes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,6 +43,8 @@ Partial Class MedicamentoEquivalente
         Me.dgvMedicamentosEquivalentes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvMedicamentosEquivalentes.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMedicamentosEquivalentes.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -52,11 +55,12 @@ Partial Class MedicamentoEquivalente
         Me.dgvMedicamentosEquivalentes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvMedicamentosEquivalentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMedicamentosEquivalentes.Location = New System.Drawing.Point(0, 0)
+        Me.dgvMedicamentosEquivalentes.MultiSelect = False
         Me.dgvMedicamentosEquivalentes.Name = "dgvMedicamentosEquivalentes"
         Me.dgvMedicamentosEquivalentes.ReadOnly = True
         Me.dgvMedicamentosEquivalentes.RowHeadersVisible = False
         Me.dgvMedicamentosEquivalentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvMedicamentosEquivalentes.Size = New System.Drawing.Size(661, 320)
+        Me.dgvMedicamentosEquivalentes.Size = New System.Drawing.Size(661, 313)
         Me.dgvMedicamentosEquivalentes.TabIndex = 0
         '
         'MedicamentoAdaptador
@@ -68,9 +72,9 @@ Partial Class MedicamentoEquivalente
         Me.tbFiltrarMedicamentos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbFiltrarMedicamentos.Location = New System.Drawing.Point(12, 326)
+        Me.tbFiltrarMedicamentos.Location = New System.Drawing.Point(12, 319)
         Me.tbFiltrarMedicamentos.Name = "tbFiltrarMedicamentos"
-        Me.tbFiltrarMedicamentos.Size = New System.Drawing.Size(637, 20)
+        Me.tbFiltrarMedicamentos.Size = New System.Drawing.Size(510, 20)
         Me.tbFiltrarMedicamentos.TabIndex = 1
         '
         'Farmacia_MedicamentoAdaptador
@@ -85,11 +89,22 @@ Partial Class MedicamentoEquivalente
         '
         Me.RecetaAdaptador.ClearBeforeFill = True
         '
+        'cbFiltroMedicamentos
+        '
+        Me.cbFiltroMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbFiltroMedicamentos.FormattingEnabled = True
+        Me.cbFiltroMedicamentos.Items.AddRange(New Object() {"Número Medicamento", "Nombre"})
+        Me.cbFiltroMedicamentos.Location = New System.Drawing.Point(528, 319)
+        Me.cbFiltroMedicamentos.Name = "cbFiltroMedicamentos"
+        Me.cbFiltroMedicamentos.Size = New System.Drawing.Size(121, 21)
+        Me.cbFiltroMedicamentos.TabIndex = 2
+        '
         'MedicamentoEquivalente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(661, 351)
+        Me.Controls.Add(Me.cbFiltroMedicamentos)
         Me.Controls.Add(Me.tbFiltrarMedicamentos)
         Me.Controls.Add(Me.dgvMedicamentosEquivalentes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
@@ -107,4 +122,5 @@ Partial Class MedicamentoEquivalente
     Friend WithEvents FarmaceuticoAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.FarmaceuticoAdaptador
     Friend WithEvents tbFiltrarMedicamentos As System.Windows.Forms.TextBox
     Friend WithEvents RecetaAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador
+    Friend WithEvents cbFiltroMedicamentos As System.Windows.Forms.ComboBox
 End Class
