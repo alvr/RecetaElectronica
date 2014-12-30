@@ -1,6 +1,9 @@
 ﻿Public Class Administracion
 
     Private Sub Administracion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'dbRecetaElectronica.GrupoEquivalencias' Puede moverla o quitarla según sea necesario.
+        Me.GrupoEquivalenciasAdaptador.Fill(Me.dbRecetaElectronica.GrupoEquivalencias)
+        Me.GrupoEquivalenciasAdaptador.Fill(Me.dbRecetaElectronica.GrupoEquivalencias)
         Me.FarmaciaAdaptador.Fill(Me.dbRecetaElectronica.Farmacia)
         Me.AmbulatorioAdaptador.Fill(Me.dbRecetaElectronica.Ambulatorio)
         Me.MedicamentoAdaptador.Fill(Me.dbRecetaElectronica.Medicamento)
@@ -10,41 +13,26 @@
     End Sub
 
     Private Sub actDatos_Click(sender As Object, e As EventArgs) Handles btnActDatos.Click
-        If tcAdministracion.SelectedTab.Text Is "Médicos" Then
-            MedicoAdaptador.Update(Me.dbRecetaElectronica.Medico)
-            MsgBox("Tabla de médicos actualizada.")
-        ElseIf tcAdministracion.SelectedTab.Text Is "Farmacéuticos" Then
-            FarmaceuticoAdaptador.Update(Me.dbRecetaElectronica.Farmaceutico)
-            MsgBox("Tabla de farmacéuticos actualizada.")
-        ElseIf tcAdministracion.SelectedTab.Text Is "Pacientes" Then
-            PacienteAdaptador.Update(Me.dbRecetaElectronica.Paciente)
-            MsgBox("Tabla de pacientes actualizada.")
-        ElseIf tcAdministracion.SelectedTab.Text Is "Medicamentos" Then
-            MedicamentoAdaptador.Update(Me.dbRecetaElectronica.Medicamento)
-            MsgBox("Tabla de médicamentos actualizada.")
-        ElseIf tcAdministracion.SelectedTab.Text Is "Ambulatorios" Then
-            AmbulatorioAdaptador.Update(Me.dbRecetaElectronica.Ambulatorio)
-            MsgBox("Tabla de ambulatorios actualizada.")
-        ElseIf tcAdministracion.SelectedTab.Text Is "Farmacias" Then
-            FarmaciaAdaptador.Update(Me.dbRecetaElectronica.Farmacia)
-            MsgBox("Tabla de farmacias actualizada.")
-        End If
+        Dim tab = tcAdministracion.SelectedIndex
+        Select Case tab
+            Case 0
+                MedicoAdaptador.Update(dbRecetaElectronica.Medico)
+                MsgBox("Tabla de médicos actualizada.")
+            Case 1
+                FarmaceuticoAdaptador.Update(dbRecetaElectronica.Farmaceutico)
+                MsgBox("Tabla de farmacéuticos actualizada.")
+            Case 2
+                PacienteAdaptador.Update(dbRecetaElectronica.Paciente)
+                MsgBox("Tabla de pacientes actualizada.")
+            Case 3
+                MedicamentoAdaptador.Update(dbRecetaElectronica.Medicamento)
+                MsgBox("Tabla de medicamentos actualizada.")
+            Case 4
+                AmbulatorioAdaptador.Update(dbRecetaElectronica.Ambulatorio)
+                MsgBox("Tabla de ambulatorios actualizada.")
+            Case 5
+                FarmaciaAdaptador.Update(dbRecetaElectronica.Farmacia)
+                MsgBox("Tabla de farmacias actualizada.")
+        End Select
     End Sub
-
-    Private Sub dgvMedicos_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvMedicos.CellFormatting
-        If e.ColumnIndex = 1 Then
-            If (Not e.Value Is Nothing) Then
-                e.Value = New String("●", e.Value.ToString().Length)
-            End If
-        End If
-    End Sub
-
-    Private Sub dgvFarmaceuticos_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvFarmaceuticos.CellFormatting
-        If e.ColumnIndex = 1 Then
-            If (Not e.Value Is Nothing) Then
-                e.Value = New String("●", e.Value.ToString().Length)
-            End If
-        End If
-    End Sub
-
 End Class

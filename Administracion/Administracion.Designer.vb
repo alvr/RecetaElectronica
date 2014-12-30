@@ -24,13 +24,15 @@ Partial Class Administracion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administracion))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MedicoDatos = New System.Windows.Forms.BindingSource(Me.components)
         Me.dbRecetaElectronica = New RecetaElectronica.dbRecetaElectronica()
         Me.FarmaceuticoDatos = New System.Windows.Forms.BindingSource(Me.components)
@@ -48,28 +50,34 @@ Partial Class Administracion
         Me.tcAdministracion = New System.Windows.Forms.TabControl()
         Me.tpMedicos = New System.Windows.Forms.TabPage()
         Me.dgvMedicos = New System.Windows.Forms.DataGridView()
-        Me.NumeroFacultativoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNIDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirmaElectronicaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CualificacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.LugarTrabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tpFarmaceuticos = New System.Windows.Forms.TabPage()
         Me.dgvFarmaceuticos = New System.Windows.Forms.DataGridView()
-        Me.NumeroColegiadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UltimoRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tpPacientes = New System.Windows.Forms.TabPage()
         Me.dgvPacientes = New System.Windows.Forms.DataGridView()
+        Me.tpMedicamentos = New System.Windows.Forms.TabPage()
+        Me.dgvMedicamentos = New System.Windows.Forms.DataGridView()
+        Me.tpAmbulatorios = New System.Windows.Forms.TabPage()
+        Me.dgvAmbulatorios = New System.Windows.Forms.DataGridView()
+        Me.IdAmbulatorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tpFarmacias = New System.Windows.Forms.TabPage()
+        Me.dgvFarmacias = New System.Windows.Forms.DataGridView()
+        Me.IdFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
+        Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
+        Me.GrupoEquivalenciasDatos = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GrupoEquivalenciasAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.GrupoEquivalenciasAdaptador()
+        Me.CNMedicamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DenominacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GrupoEquivalencia = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DosisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FormatoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroEnvaseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Posologia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidosDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -82,27 +90,24 @@ Partial Class Administracion
         Me.EntidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.Acumulado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HistorialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tpMedicamentos = New System.Windows.Forms.TabPage()
-        Me.dgvMedicamentos = New System.Windows.Forms.DataGridView()
-        Me.CNMedicamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DenominacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GrupoEquivalenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DosisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ViaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FormatoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroEnvaseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Posologia = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tpAmbulatorios = New System.Windows.Forms.TabPage()
-        Me.dgvAmbulatorios = New System.Windows.Forms.DataGridView()
-        Me.IdAmbulatorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tpFarmacias = New System.Windows.Forms.TabPage()
-        Me.dgvFarmacias = New System.Windows.Forms.DataGridView()
-        Me.IdFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
+        Me.NumeroFacultativoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DNIDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirmaElectronicaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CualificacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.LugarTrabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.NumeroColegiadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DNIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UltimoRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         CType(Me.MedicoDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dbRecetaElectronica, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FarmaceuticoDatos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,6 +128,7 @@ Partial Class Administracion
         CType(Me.dgvAmbulatorios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpFarmacias.SuspendLayout()
         CType(Me.dgvFarmacias, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrupoEquivalenciasDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MedicoDatos
@@ -252,6 +258,416 @@ Partial Class Administracion
         Me.dgvMedicos.Size = New System.Drawing.Size(831, 334)
         Me.dgvMedicos.TabIndex = 0
         '
+        'tpFarmaceuticos
+        '
+        Me.tpFarmaceuticos.Controls.Add(Me.dgvFarmaceuticos)
+        Me.tpFarmaceuticos.ImageIndex = 1
+        Me.tpFarmaceuticos.Location = New System.Drawing.Point(4, 23)
+        Me.tpFarmaceuticos.Name = "tpFarmaceuticos"
+        Me.tpFarmaceuticos.Size = New System.Drawing.Size(831, 334)
+        Me.tpFarmaceuticos.TabIndex = 7
+        Me.tpFarmaceuticos.Text = "Farmacéuticos"
+        Me.tpFarmaceuticos.UseVisualStyleBackColor = True
+        '
+        'dgvFarmaceuticos
+        '
+        Me.dgvFarmaceuticos.AllowUserToResizeColumns = False
+        Me.dgvFarmaceuticos.AllowUserToResizeRows = False
+        Me.dgvFarmaceuticos.AutoGenerateColumns = False
+        Me.dgvFarmaceuticos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvFarmaceuticos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFarmaceuticos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvFarmaceuticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvFarmaceuticos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumeroColegiadoDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DNIDataGridViewTextBoxColumn, Me.UltimoRegistroDataGridViewTextBoxColumn, Me.NumeroFarmaciaDataGridViewTextBoxColumn})
+        Me.dgvFarmaceuticos.DataSource = Me.FarmaceuticoDatos
+        Me.dgvFarmaceuticos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvFarmaceuticos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvFarmaceuticos.MultiSelect = False
+        Me.dgvFarmaceuticos.Name = "dgvFarmaceuticos"
+        Me.dgvFarmaceuticos.RowHeadersVisible = False
+        Me.dgvFarmaceuticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvFarmaceuticos.Size = New System.Drawing.Size(831, 334)
+        Me.dgvFarmaceuticos.TabIndex = 0
+        '
+        'tpPacientes
+        '
+        Me.tpPacientes.Controls.Add(Me.dgvPacientes)
+        Me.tpPacientes.ImageIndex = 2
+        Me.tpPacientes.Location = New System.Drawing.Point(4, 23)
+        Me.tpPacientes.Name = "tpPacientes"
+        Me.tpPacientes.Size = New System.Drawing.Size(831, 334)
+        Me.tpPacientes.TabIndex = 2
+        Me.tpPacientes.Text = "Pacientes"
+        Me.tpPacientes.UseVisualStyleBackColor = True
+        '
+        'dgvPacientes
+        '
+        Me.dgvPacientes.AllowUserToResizeColumns = False
+        Me.dgvPacientes.AllowUserToResizeRows = False
+        Me.dgvPacientes.AutoGenerateColumns = False
+        Me.dgvPacientes.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPacientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn2, Me.ApellidosDataGridViewTextBoxColumn2, Me.DNIDataGridViewTextBoxColumn2, Me.FechaNacimientoDataGridViewTextBoxColumn, Me.CronicoDataGridViewCheckBoxColumn, Me.ExentoAportacion, Me.BaremoEconomicoDataGridViewTextBoxColumn, Me.SituacionLaboralDataGridViewTextBoxColumn, Me.EntidadDataGridViewTextBoxColumn, Me.Acumulado, Me.HistorialDataGridViewTextBoxColumn})
+        Me.dgvPacientes.DataSource = Me.PacienteDatos
+        Me.dgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvPacientes.Location = New System.Drawing.Point(0, 0)
+        Me.dgvPacientes.MultiSelect = False
+        Me.dgvPacientes.Name = "dgvPacientes"
+        Me.dgvPacientes.RowHeadersVisible = False
+        Me.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvPacientes.Size = New System.Drawing.Size(831, 334)
+        Me.dgvPacientes.TabIndex = 0
+        '
+        'tpMedicamentos
+        '
+        Me.tpMedicamentos.Controls.Add(Me.dgvMedicamentos)
+        Me.tpMedicamentos.ImageIndex = 3
+        Me.tpMedicamentos.Location = New System.Drawing.Point(4, 23)
+        Me.tpMedicamentos.Name = "tpMedicamentos"
+        Me.tpMedicamentos.Size = New System.Drawing.Size(831, 334)
+        Me.tpMedicamentos.TabIndex = 3
+        Me.tpMedicamentos.Text = "Medicamentos"
+        Me.tpMedicamentos.UseVisualStyleBackColor = True
+        '
+        'dgvMedicamentos
+        '
+        Me.dgvMedicamentos.AllowUserToResizeColumns = False
+        Me.dgvMedicamentos.AllowUserToResizeRows = False
+        Me.dgvMedicamentos.AutoGenerateColumns = False
+        Me.dgvMedicamentos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvMedicamentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMedicamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CNMedicamentoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn3, Me.DenominacionDataGridViewTextBoxColumn, Me.GrupoEquivalencia, Me.DosisDataGridViewTextBoxColumn, Me.ViaDataGridViewTextBoxColumn, Me.FormatoDataGridViewTextBoxColumn, Me.NumeroEnvaseDataGridViewTextBoxColumn, Me.Posologia, Me.Precio})
+        Me.dgvMedicamentos.DataSource = Me.MedicamentoDatos
+        Me.dgvMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvMedicamentos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvMedicamentos.MultiSelect = False
+        Me.dgvMedicamentos.Name = "dgvMedicamentos"
+        Me.dgvMedicamentos.RowHeadersVisible = False
+        Me.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvMedicamentos.Size = New System.Drawing.Size(831, 334)
+        Me.dgvMedicamentos.TabIndex = 0
+        '
+        'tpAmbulatorios
+        '
+        Me.tpAmbulatorios.Controls.Add(Me.dgvAmbulatorios)
+        Me.tpAmbulatorios.ImageIndex = 4
+        Me.tpAmbulatorios.Location = New System.Drawing.Point(4, 23)
+        Me.tpAmbulatorios.Name = "tpAmbulatorios"
+        Me.tpAmbulatorios.Size = New System.Drawing.Size(831, 334)
+        Me.tpAmbulatorios.TabIndex = 4
+        Me.tpAmbulatorios.Text = "Ambulatorios"
+        Me.tpAmbulatorios.UseVisualStyleBackColor = True
+        '
+        'dgvAmbulatorios
+        '
+        Me.dgvAmbulatorios.AllowUserToResizeColumns = False
+        Me.dgvAmbulatorios.AllowUserToResizeRows = False
+        Me.dgvAmbulatorios.AutoGenerateColumns = False
+        Me.dgvAmbulatorios.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvAmbulatorios.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvAmbulatorios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvAmbulatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAmbulatorios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAmbulatorioDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn1})
+        Me.dgvAmbulatorios.DataSource = Me.AmbulatorioDatos
+        Me.dgvAmbulatorios.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvAmbulatorios.Location = New System.Drawing.Point(0, 0)
+        Me.dgvAmbulatorios.MultiSelect = False
+        Me.dgvAmbulatorios.Name = "dgvAmbulatorios"
+        Me.dgvAmbulatorios.RowHeadersVisible = False
+        Me.dgvAmbulatorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvAmbulatorios.Size = New System.Drawing.Size(831, 334)
+        Me.dgvAmbulatorios.TabIndex = 0
+        '
+        'IdAmbulatorioDataGridViewTextBoxColumn
+        '
+        Me.IdAmbulatorioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdAmbulatorioDataGridViewTextBoxColumn.DataPropertyName = "idAmbulatorio"
+        Me.IdAmbulatorioDataGridViewTextBoxColumn.HeaderText = "Ambulatorio"
+        Me.IdAmbulatorioDataGridViewTextBoxColumn.Name = "IdAmbulatorioDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn1
+        '
+        Me.DireccionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DireccionDataGridViewTextBoxColumn1.DataPropertyName = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn1.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn1.Name = "DireccionDataGridViewTextBoxColumn1"
+        '
+        'tpFarmacias
+        '
+        Me.tpFarmacias.Controls.Add(Me.dgvFarmacias)
+        Me.tpFarmacias.ImageIndex = 4
+        Me.tpFarmacias.Location = New System.Drawing.Point(4, 23)
+        Me.tpFarmacias.Name = "tpFarmacias"
+        Me.tpFarmacias.Size = New System.Drawing.Size(831, 334)
+        Me.tpFarmacias.TabIndex = 5
+        Me.tpFarmacias.Text = "Farmacias"
+        Me.tpFarmacias.UseVisualStyleBackColor = True
+        '
+        'dgvFarmacias
+        '
+        Me.dgvFarmacias.AllowUserToResizeColumns = False
+        Me.dgvFarmacias.AllowUserToResizeRows = False
+        Me.dgvFarmacias.AutoGenerateColumns = False
+        Me.dgvFarmacias.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvFarmacias.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFarmacias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvFarmacias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvFarmacias.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdFarmaciaDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn2})
+        Me.dgvFarmacias.DataSource = Me.FarmaciaDatos
+        Me.dgvFarmacias.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvFarmacias.Location = New System.Drawing.Point(0, 0)
+        Me.dgvFarmacias.MultiSelect = False
+        Me.dgvFarmacias.Name = "dgvFarmacias"
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFarmacias.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.dgvFarmacias.RowHeadersVisible = False
+        Me.dgvFarmacias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvFarmacias.Size = New System.Drawing.Size(831, 334)
+        Me.dgvFarmacias.TabIndex = 0
+        '
+        'IdFarmaciaDataGridViewTextBoxColumn
+        '
+        Me.IdFarmaciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdFarmaciaDataGridViewTextBoxColumn.DataPropertyName = "idFarmacia"
+        Me.IdFarmaciaDataGridViewTextBoxColumn.HeaderText = "Farmacia"
+        Me.IdFarmaciaDataGridViewTextBoxColumn.Name = "IdFarmaciaDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn2
+        '
+        Me.DireccionDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DireccionDataGridViewTextBoxColumn2.DataPropertyName = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn2.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn2.Name = "DireccionDataGridViewTextBoxColumn2"
+        '
+        'IconosPestañas
+        '
+        Me.IconosPestañas.ImageStream = CType(resources.GetObject("IconosPestañas.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.IconosPestañas.TransparentColor = System.Drawing.Color.Transparent
+        Me.IconosPestañas.Images.SetKeyName(0, "medicos.png")
+        Me.IconosPestañas.Images.SetKeyName(1, "farmaceuticos.png")
+        Me.IconosPestañas.Images.SetKeyName(2, "pacientes.png")
+        Me.IconosPestañas.Images.SetKeyName(3, "medicamentos.png")
+        Me.IconosPestañas.Images.SetKeyName(4, "trabajo.png")
+        '
+        'RecetaAdaptador
+        '
+        Me.RecetaAdaptador.ClearBeforeFill = True
+        '
+        'GrupoEquivalenciasDatos
+        '
+        Me.GrupoEquivalenciasDatos.DataMember = "GrupoEquivalencias"
+        Me.GrupoEquivalenciasDatos.DataSource = Me.dbRecetaElectronica
+        '
+        'GrupoEquivalenciasAdaptador
+        '
+        Me.GrupoEquivalenciasAdaptador.ClearBeforeFill = True
+        '
+        'CNMedicamentoDataGridViewTextBoxColumn
+        '
+        Me.CNMedicamentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.CNMedicamentoDataGridViewTextBoxColumn.DataPropertyName = "CNMedicamento"
+        Me.CNMedicamentoDataGridViewTextBoxColumn.HeaderText = "Medicamento"
+        Me.CNMedicamentoDataGridViewTextBoxColumn.Name = "CNMedicamentoDataGridViewTextBoxColumn"
+        Me.CNMedicamentoDataGridViewTextBoxColumn.Width = 96
+        '
+        'NombreDataGridViewTextBoxColumn3
+        '
+        Me.NombreDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NombreDataGridViewTextBoxColumn3.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn3.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn3.Name = "NombreDataGridViewTextBoxColumn3"
+        Me.NombreDataGridViewTextBoxColumn3.Width = 69
+        '
+        'DenominacionDataGridViewTextBoxColumn
+        '
+        Me.DenominacionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DenominacionDataGridViewTextBoxColumn.DataPropertyName = "Denominacion"
+        Me.DenominacionDataGridViewTextBoxColumn.HeaderText = "Denominación"
+        Me.DenominacionDataGridViewTextBoxColumn.Name = "DenominacionDataGridViewTextBoxColumn"
+        '
+        'GrupoEquivalencia
+        '
+        Me.GrupoEquivalencia.DataPropertyName = "GrupoEquivalencia"
+        Me.GrupoEquivalencia.DataSource = Me.GrupoEquivalenciasDatos
+        Me.GrupoEquivalencia.DisplayMember = "GrupoEquivalencias"
+        Me.GrupoEquivalencia.HeaderText = "Grupo Equivalencia"
+        Me.GrupoEquivalencia.Name = "GrupoEquivalencia"
+        '
+        'DosisDataGridViewTextBoxColumn
+        '
+        Me.DosisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DosisDataGridViewTextBoxColumn.DataPropertyName = "Dosis"
+        Me.DosisDataGridViewTextBoxColumn.HeaderText = "Dosis"
+        Me.DosisDataGridViewTextBoxColumn.Name = "DosisDataGridViewTextBoxColumn"
+        Me.DosisDataGridViewTextBoxColumn.Width = 58
+        '
+        'ViaDataGridViewTextBoxColumn
+        '
+        Me.ViaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ViaDataGridViewTextBoxColumn.DataPropertyName = "Via"
+        Me.ViaDataGridViewTextBoxColumn.HeaderText = "Vía"
+        Me.ViaDataGridViewTextBoxColumn.Name = "ViaDataGridViewTextBoxColumn"
+        Me.ViaDataGridViewTextBoxColumn.Width = 49
+        '
+        'FormatoDataGridViewTextBoxColumn
+        '
+        Me.FormatoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.FormatoDataGridViewTextBoxColumn.DataPropertyName = "Formato"
+        Me.FormatoDataGridViewTextBoxColumn.HeaderText = "Formato"
+        Me.FormatoDataGridViewTextBoxColumn.Name = "FormatoDataGridViewTextBoxColumn"
+        Me.FormatoDataGridViewTextBoxColumn.Width = 70
+        '
+        'NumeroEnvaseDataGridViewTextBoxColumn
+        '
+        Me.NumeroEnvaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NumeroEnvaseDataGridViewTextBoxColumn.DataPropertyName = "NumeroEnvase"
+        Me.NumeroEnvaseDataGridViewTextBoxColumn.HeaderText = "Número Envase"
+        Me.NumeroEnvaseDataGridViewTextBoxColumn.Name = "NumeroEnvaseDataGridViewTextBoxColumn"
+        Me.NumeroEnvaseDataGridViewTextBoxColumn.Width = 108
+        '
+        'Posologia
+        '
+        Me.Posologia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Posologia.DataPropertyName = "Posologia"
+        Me.Posologia.HeaderText = "Posología"
+        Me.Posologia.Name = "Posologia"
+        '
+        'Precio
+        '
+        Me.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Precio.DataPropertyName = "Precio"
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.Width = 62
+        '
+        'NumeroTarjetaSanitariaDataGridViewTextBoxColumn
+        '
+        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.DataPropertyName = "NumeroTarjetaSanitaria"
+        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.HeaderText = "Tarjeta Sanitaria"
+        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.Name = "NumeroTarjetaSanitariaDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn2
+        '
+        Me.NombreDataGridViewTextBoxColumn2.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn2.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn2.Name = "NombreDataGridViewTextBoxColumn2"
+        '
+        'ApellidosDataGridViewTextBoxColumn2
+        '
+        Me.ApellidosDataGridViewTextBoxColumn2.DataPropertyName = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn2.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn2.Name = "ApellidosDataGridViewTextBoxColumn2"
+        '
+        'DNIDataGridViewTextBoxColumn2
+        '
+        Me.DNIDataGridViewTextBoxColumn2.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn2.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn2.Name = "DNIDataGridViewTextBoxColumn2"
+        '
+        'FechaNacimientoDataGridViewTextBoxColumn
+        '
+        Me.FechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nacimiento"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.Name = "FechaNacimientoDataGridViewTextBoxColumn"
+        '
+        'CronicoDataGridViewCheckBoxColumn
+        '
+        Me.CronicoDataGridViewCheckBoxColumn.DataPropertyName = "Cronico"
+        Me.CronicoDataGridViewCheckBoxColumn.HeaderText = "Crónico"
+        Me.CronicoDataGridViewCheckBoxColumn.Name = "CronicoDataGridViewCheckBoxColumn"
+        '
+        'ExentoAportacion
+        '
+        Me.ExentoAportacion.DataPropertyName = "ExentoAportacion"
+        Me.ExentoAportacion.HeaderText = "Exento Aportación"
+        Me.ExentoAportacion.Name = "ExentoAportacion"
+        '
+        'BaremoEconomicoDataGridViewTextBoxColumn
+        '
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.DataPropertyName = "BaremoEconomico"
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.HeaderText = "Baremo Económico"
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.Items.AddRange(New Object() {"<18.000", "18.000-100.000", ">100.000"})
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.Name = "BaremoEconomicoDataGridViewTextBoxColumn"
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'SituacionLaboralDataGridViewTextBoxColumn
+        '
+        Me.SituacionLaboralDataGridViewTextBoxColumn.DataPropertyName = "SituacionLaboral"
+        Me.SituacionLaboralDataGridViewTextBoxColumn.HeaderText = "Situación Laboral"
+        Me.SituacionLaboralDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Activo", "Pensionista", "Mutualidad"})
+        Me.SituacionLaboralDataGridViewTextBoxColumn.Name = "SituacionLaboralDataGridViewTextBoxColumn"
+        Me.SituacionLaboralDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SituacionLaboralDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'EntidadDataGridViewTextBoxColumn
+        '
+        Me.EntidadDataGridViewTextBoxColumn.DataPropertyName = "Entidad"
+        Me.EntidadDataGridViewTextBoxColumn.HeaderText = "Entidad"
+        Me.EntidadDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Seguridad Social", "Muface", "Isfas", "Mutualidad General Judicial"})
+        Me.EntidadDataGridViewTextBoxColumn.Name = "EntidadDataGridViewTextBoxColumn"
+        Me.EntidadDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EntidadDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Acumulado
+        '
+        Me.Acumulado.DataPropertyName = "Acumulado"
+        Me.Acumulado.HeaderText = "Acumulado"
+        Me.Acumulado.Name = "Acumulado"
+        '
+        'HistorialDataGridViewTextBoxColumn
+        '
+        Me.HistorialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.HistorialDataGridViewTextBoxColumn.DataPropertyName = "Historial"
+        Me.HistorialDataGridViewTextBoxColumn.HeaderText = "Historial"
+        Me.HistorialDataGridViewTextBoxColumn.Name = "HistorialDataGridViewTextBoxColumn"
+        Me.HistorialDataGridViewTextBoxColumn.Width = 69
+        '
         'NumeroFacultativoDataGridViewTextBoxColumn
         '
         Me.NumeroFacultativoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
@@ -263,6 +679,9 @@ Partial Class Administracion
         'PasswordDataGridViewTextBoxColumn1
         '
         Me.PasswordDataGridViewTextBoxColumn1.DataPropertyName = "Password"
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Highlight
+        Me.PasswordDataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
         Me.PasswordDataGridViewTextBoxColumn1.HeaderText = "Contraseña"
         Me.PasswordDataGridViewTextBoxColumn1.Name = "PasswordDataGridViewTextBoxColumn1"
         '
@@ -320,46 +739,12 @@ Partial Class Administracion
         'LugarTrabajoDataGridViewTextBoxColumn
         '
         Me.LugarTrabajoDataGridViewTextBoxColumn.DataPropertyName = "LugarTrabajo"
+        Me.LugarTrabajoDataGridViewTextBoxColumn.DataSource = Me.AmbulatorioDatos
+        Me.LugarTrabajoDataGridViewTextBoxColumn.DisplayMember = "idAmbulatorio"
         Me.LugarTrabajoDataGridViewTextBoxColumn.HeaderText = "Lugar de Trabajo"
         Me.LugarTrabajoDataGridViewTextBoxColumn.Name = "LugarTrabajoDataGridViewTextBoxColumn"
-        '
-        'tpFarmaceuticos
-        '
-        Me.tpFarmaceuticos.Controls.Add(Me.dgvFarmaceuticos)
-        Me.tpFarmaceuticos.ImageIndex = 1
-        Me.tpFarmaceuticos.Location = New System.Drawing.Point(4, 23)
-        Me.tpFarmaceuticos.Name = "tpFarmaceuticos"
-        Me.tpFarmaceuticos.Size = New System.Drawing.Size(831, 334)
-        Me.tpFarmaceuticos.TabIndex = 7
-        Me.tpFarmaceuticos.Text = "Farmacéuticos"
-        Me.tpFarmaceuticos.UseVisualStyleBackColor = True
-        '
-        'dgvFarmaceuticos
-        '
-        Me.dgvFarmaceuticos.AllowUserToResizeColumns = False
-        Me.dgvFarmaceuticos.AllowUserToResizeRows = False
-        Me.dgvFarmaceuticos.AutoGenerateColumns = False
-        Me.dgvFarmaceuticos.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvFarmaceuticos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvFarmaceuticos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvFarmaceuticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFarmaceuticos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumeroColegiadoDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DNIDataGridViewTextBoxColumn, Me.UltimoRegistroDataGridViewTextBoxColumn, Me.NumeroFarmaciaDataGridViewTextBoxColumn})
-        Me.dgvFarmaceuticos.DataSource = Me.FarmaceuticoDatos
-        Me.dgvFarmaceuticos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvFarmaceuticos.Location = New System.Drawing.Point(0, 0)
-        Me.dgvFarmaceuticos.MultiSelect = False
-        Me.dgvFarmaceuticos.Name = "dgvFarmaceuticos"
-        Me.dgvFarmaceuticos.RowHeadersVisible = False
-        Me.dgvFarmaceuticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFarmaceuticos.Size = New System.Drawing.Size(831, 334)
-        Me.dgvFarmaceuticos.TabIndex = 0
+        Me.LugarTrabajoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.LugarTrabajoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'NumeroColegiadoDataGridViewTextBoxColumn
         '
@@ -372,6 +757,9 @@ Partial Class Administracion
         '
         Me.PasswordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Highlight
+        Me.PasswordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
         Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Contraseña"
         Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
         '
@@ -407,366 +795,12 @@ Partial Class Administracion
         '
         Me.NumeroFarmaciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NumeroFarmaciaDataGridViewTextBoxColumn.DataPropertyName = "NumeroFarmacia"
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DataSource = Me.FarmaciaDatos
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DisplayMember = "idFarmacia"
         Me.NumeroFarmaciaDataGridViewTextBoxColumn.HeaderText = "Número Farmacia"
         Me.NumeroFarmaciaDataGridViewTextBoxColumn.Name = "NumeroFarmaciaDataGridViewTextBoxColumn"
-        '
-        'tpPacientes
-        '
-        Me.tpPacientes.Controls.Add(Me.dgvPacientes)
-        Me.tpPacientes.ImageIndex = 2
-        Me.tpPacientes.Location = New System.Drawing.Point(4, 23)
-        Me.tpPacientes.Name = "tpPacientes"
-        Me.tpPacientes.Size = New System.Drawing.Size(831, 334)
-        Me.tpPacientes.TabIndex = 2
-        Me.tpPacientes.Text = "Pacientes"
-        Me.tpPacientes.UseVisualStyleBackColor = True
-        '
-        'dgvPacientes
-        '
-        Me.dgvPacientes.AllowUserToResizeColumns = False
-        Me.dgvPacientes.AllowUserToResizeRows = False
-        Me.dgvPacientes.AutoGenerateColumns = False
-        Me.dgvPacientes.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPacientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn2, Me.ApellidosDataGridViewTextBoxColumn2, Me.DNIDataGridViewTextBoxColumn2, Me.FechaNacimientoDataGridViewTextBoxColumn, Me.CronicoDataGridViewCheckBoxColumn, Me.ExentoAportacion, Me.BaremoEconomicoDataGridViewTextBoxColumn, Me.SituacionLaboralDataGridViewTextBoxColumn, Me.EntidadDataGridViewTextBoxColumn, Me.Acumulado, Me.HistorialDataGridViewTextBoxColumn})
-        Me.dgvPacientes.DataSource = Me.PacienteDatos
-        Me.dgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvPacientes.Location = New System.Drawing.Point(0, 0)
-        Me.dgvPacientes.MultiSelect = False
-        Me.dgvPacientes.Name = "dgvPacientes"
-        Me.dgvPacientes.RowHeadersVisible = False
-        Me.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPacientes.Size = New System.Drawing.Size(831, 334)
-        Me.dgvPacientes.TabIndex = 0
-        '
-        'NumeroTarjetaSanitariaDataGridViewTextBoxColumn
-        '
-        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.DataPropertyName = "NumeroTarjetaSanitaria"
-        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.HeaderText = "Tarjeta Sanitaria"
-        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.Name = "NumeroTarjetaSanitariaDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn2
-        '
-        Me.NombreDataGridViewTextBoxColumn2.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn2.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn2.Name = "NombreDataGridViewTextBoxColumn2"
-        '
-        'ApellidosDataGridViewTextBoxColumn2
-        '
-        Me.ApellidosDataGridViewTextBoxColumn2.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn2.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn2.Name = "ApellidosDataGridViewTextBoxColumn2"
-        '
-        'DNIDataGridViewTextBoxColumn2
-        '
-        Me.DNIDataGridViewTextBoxColumn2.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn2.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn2.Name = "DNIDataGridViewTextBoxColumn2"
-        '
-        'FechaNacimientoDataGridViewTextBoxColumn
-        '
-        Me.FechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nacimiento"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.Name = "FechaNacimientoDataGridViewTextBoxColumn"
-        '
-        'CronicoDataGridViewCheckBoxColumn
-        '
-        Me.CronicoDataGridViewCheckBoxColumn.DataPropertyName = "Cronico"
-        Me.CronicoDataGridViewCheckBoxColumn.HeaderText = "Crónico"
-        Me.CronicoDataGridViewCheckBoxColumn.Name = "CronicoDataGridViewCheckBoxColumn"
-        '
-        'ExentoAportacion
-        '
-        Me.ExentoAportacion.DataPropertyName = "ExentoAportacion"
-        Me.ExentoAportacion.HeaderText = "Exento Aportación"
-        Me.ExentoAportacion.Name = "ExentoAportacion"
-        '
-        'BaremoEconomicoDataGridViewTextBoxColumn
-        '
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.DataPropertyName = "BaremoEconomico"
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.HeaderText = "Baremo Económico"
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.Items.AddRange(New Object() {"<18.000", "18.000-100.000", ">100.000"})
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.Name = "BaremoEconomicoDataGridViewTextBoxColumn"
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'SituacionLaboralDataGridViewTextBoxColumn
-        '
-        Me.SituacionLaboralDataGridViewTextBoxColumn.DataPropertyName = "SituacionLaboral"
-        Me.SituacionLaboralDataGridViewTextBoxColumn.HeaderText = "Situación Laboral"
-        Me.SituacionLaboralDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Activo", "Pensionista", "Parado", "Mutualidad"})
-        Me.SituacionLaboralDataGridViewTextBoxColumn.Name = "SituacionLaboralDataGridViewTextBoxColumn"
-        Me.SituacionLaboralDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SituacionLaboralDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'EntidadDataGridViewTextBoxColumn
-        '
-        Me.EntidadDataGridViewTextBoxColumn.DataPropertyName = "Entidad"
-        Me.EntidadDataGridViewTextBoxColumn.HeaderText = "Entidad"
-        Me.EntidadDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Seguridad Social", "Muface", "Isfas", "Mutualidad General Judicial"})
-        Me.EntidadDataGridViewTextBoxColumn.Name = "EntidadDataGridViewTextBoxColumn"
-        Me.EntidadDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EntidadDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'Acumulado
-        '
-        Me.Acumulado.DataPropertyName = "Acumulado"
-        Me.Acumulado.HeaderText = "Acumulado"
-        Me.Acumulado.Name = "Acumulado"
-        '
-        'HistorialDataGridViewTextBoxColumn
-        '
-        Me.HistorialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.HistorialDataGridViewTextBoxColumn.DataPropertyName = "Historial"
-        Me.HistorialDataGridViewTextBoxColumn.HeaderText = "Historial"
-        Me.HistorialDataGridViewTextBoxColumn.Name = "HistorialDataGridViewTextBoxColumn"
-        '
-        'tpMedicamentos
-        '
-        Me.tpMedicamentos.Controls.Add(Me.dgvMedicamentos)
-        Me.tpMedicamentos.ImageIndex = 3
-        Me.tpMedicamentos.Location = New System.Drawing.Point(4, 23)
-        Me.tpMedicamentos.Name = "tpMedicamentos"
-        Me.tpMedicamentos.Size = New System.Drawing.Size(831, 334)
-        Me.tpMedicamentos.TabIndex = 3
-        Me.tpMedicamentos.Text = "Medicamentos"
-        Me.tpMedicamentos.UseVisualStyleBackColor = True
-        '
-        'dgvMedicamentos
-        '
-        Me.dgvMedicamentos.AllowUserToResizeColumns = False
-        Me.dgvMedicamentos.AllowUserToResizeRows = False
-        Me.dgvMedicamentos.AutoGenerateColumns = False
-        Me.dgvMedicamentos.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvMedicamentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMedicamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CNMedicamentoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn3, Me.DenominacionDataGridViewTextBoxColumn, Me.GrupoEquivalenciaDataGridViewTextBoxColumn, Me.DosisDataGridViewTextBoxColumn, Me.ViaDataGridViewTextBoxColumn, Me.FormatoDataGridViewTextBoxColumn, Me.NumeroEnvaseDataGridViewTextBoxColumn, Me.Posologia, Me.Precio})
-        Me.dgvMedicamentos.DataSource = Me.MedicamentoDatos
-        Me.dgvMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvMedicamentos.Location = New System.Drawing.Point(0, 0)
-        Me.dgvMedicamentos.MultiSelect = False
-        Me.dgvMedicamentos.Name = "dgvMedicamentos"
-        Me.dgvMedicamentos.RowHeadersVisible = False
-        Me.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvMedicamentos.Size = New System.Drawing.Size(831, 334)
-        Me.dgvMedicamentos.TabIndex = 0
-        '
-        'CNMedicamentoDataGridViewTextBoxColumn
-        '
-        Me.CNMedicamentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.CNMedicamentoDataGridViewTextBoxColumn.DataPropertyName = "CNMedicamento"
-        Me.CNMedicamentoDataGridViewTextBoxColumn.HeaderText = "Medicamento"
-        Me.CNMedicamentoDataGridViewTextBoxColumn.Name = "CNMedicamentoDataGridViewTextBoxColumn"
-        Me.CNMedicamentoDataGridViewTextBoxColumn.Width = 96
-        '
-        'NombreDataGridViewTextBoxColumn3
-        '
-        Me.NombreDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NombreDataGridViewTextBoxColumn3.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn3.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn3.Name = "NombreDataGridViewTextBoxColumn3"
-        Me.NombreDataGridViewTextBoxColumn3.Width = 69
-        '
-        'DenominacionDataGridViewTextBoxColumn
-        '
-        Me.DenominacionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DenominacionDataGridViewTextBoxColumn.DataPropertyName = "Denominacion"
-        Me.DenominacionDataGridViewTextBoxColumn.HeaderText = "Denominación"
-        Me.DenominacionDataGridViewTextBoxColumn.Name = "DenominacionDataGridViewTextBoxColumn"
-        '
-        'GrupoEquivalenciaDataGridViewTextBoxColumn
-        '
-        Me.GrupoEquivalenciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.GrupoEquivalenciaDataGridViewTextBoxColumn.DataPropertyName = "GrupoEquivalencia"
-        Me.GrupoEquivalenciaDataGridViewTextBoxColumn.HeaderText = "Grupo Equivalencia"
-        Me.GrupoEquivalenciaDataGridViewTextBoxColumn.Name = "GrupoEquivalenciaDataGridViewTextBoxColumn"
-        Me.GrupoEquivalenciaDataGridViewTextBoxColumn.Width = 125
-        '
-        'DosisDataGridViewTextBoxColumn
-        '
-        Me.DosisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DosisDataGridViewTextBoxColumn.DataPropertyName = "Dosis"
-        Me.DosisDataGridViewTextBoxColumn.HeaderText = "Dosis"
-        Me.DosisDataGridViewTextBoxColumn.Name = "DosisDataGridViewTextBoxColumn"
-        Me.DosisDataGridViewTextBoxColumn.Width = 58
-        '
-        'ViaDataGridViewTextBoxColumn
-        '
-        Me.ViaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ViaDataGridViewTextBoxColumn.DataPropertyName = "Via"
-        Me.ViaDataGridViewTextBoxColumn.HeaderText = "Vía"
-        Me.ViaDataGridViewTextBoxColumn.Name = "ViaDataGridViewTextBoxColumn"
-        Me.ViaDataGridViewTextBoxColumn.Width = 49
-        '
-        'FormatoDataGridViewTextBoxColumn
-        '
-        Me.FormatoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.FormatoDataGridViewTextBoxColumn.DataPropertyName = "Formato"
-        Me.FormatoDataGridViewTextBoxColumn.HeaderText = "Formato"
-        Me.FormatoDataGridViewTextBoxColumn.Name = "FormatoDataGridViewTextBoxColumn"
-        Me.FormatoDataGridViewTextBoxColumn.Width = 70
-        '
-        'NumeroEnvaseDataGridViewTextBoxColumn
-        '
-        Me.NumeroEnvaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NumeroEnvaseDataGridViewTextBoxColumn.DataPropertyName = "NumeroEnvase"
-        Me.NumeroEnvaseDataGridViewTextBoxColumn.HeaderText = "Número Envase"
-        Me.NumeroEnvaseDataGridViewTextBoxColumn.Name = "NumeroEnvaseDataGridViewTextBoxColumn"
-        Me.NumeroEnvaseDataGridViewTextBoxColumn.Width = 108
-        '
-        'Posologia
-        '
-        Me.Posologia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Posologia.DataPropertyName = "Posologia"
-        Me.Posologia.HeaderText = "Posología"
-        Me.Posologia.Name = "Posologia"
-        '
-        'Precio
-        '
-        Me.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Precio.DataPropertyName = "Precio"
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.Width = 62
-        '
-        'tpAmbulatorios
-        '
-        Me.tpAmbulatorios.Controls.Add(Me.dgvAmbulatorios)
-        Me.tpAmbulatorios.ImageIndex = 4
-        Me.tpAmbulatorios.Location = New System.Drawing.Point(4, 23)
-        Me.tpAmbulatorios.Name = "tpAmbulatorios"
-        Me.tpAmbulatorios.Size = New System.Drawing.Size(831, 334)
-        Me.tpAmbulatorios.TabIndex = 4
-        Me.tpAmbulatorios.Text = "Ambulatorios"
-        Me.tpAmbulatorios.UseVisualStyleBackColor = True
-        '
-        'dgvAmbulatorios
-        '
-        Me.dgvAmbulatorios.AllowUserToResizeColumns = False
-        Me.dgvAmbulatorios.AllowUserToResizeRows = False
-        Me.dgvAmbulatorios.AutoGenerateColumns = False
-        Me.dgvAmbulatorios.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvAmbulatorios.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvAmbulatorios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvAmbulatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAmbulatorios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAmbulatorioDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn1})
-        Me.dgvAmbulatorios.DataSource = Me.AmbulatorioDatos
-        Me.dgvAmbulatorios.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvAmbulatorios.Location = New System.Drawing.Point(0, 0)
-        Me.dgvAmbulatorios.MultiSelect = False
-        Me.dgvAmbulatorios.Name = "dgvAmbulatorios"
-        Me.dgvAmbulatorios.RowHeadersVisible = False
-        Me.dgvAmbulatorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAmbulatorios.Size = New System.Drawing.Size(831, 334)
-        Me.dgvAmbulatorios.TabIndex = 0
-        '
-        'IdAmbulatorioDataGridViewTextBoxColumn
-        '
-        Me.IdAmbulatorioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdAmbulatorioDataGridViewTextBoxColumn.DataPropertyName = "idAmbulatorio"
-        Me.IdAmbulatorioDataGridViewTextBoxColumn.HeaderText = "Ambulatorio"
-        Me.IdAmbulatorioDataGridViewTextBoxColumn.Name = "IdAmbulatorioDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn1
-        '
-        Me.DireccionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DireccionDataGridViewTextBoxColumn1.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn1.HeaderText = "Dirección"
-        Me.DireccionDataGridViewTextBoxColumn1.Name = "DireccionDataGridViewTextBoxColumn1"
-        '
-        'tpFarmacias
-        '
-        Me.tpFarmacias.Controls.Add(Me.dgvFarmacias)
-        Me.tpFarmacias.ImageIndex = 4
-        Me.tpFarmacias.Location = New System.Drawing.Point(4, 23)
-        Me.tpFarmacias.Name = "tpFarmacias"
-        Me.tpFarmacias.Size = New System.Drawing.Size(831, 334)
-        Me.tpFarmacias.TabIndex = 5
-        Me.tpFarmacias.Text = "Farmacias"
-        Me.tpFarmacias.UseVisualStyleBackColor = True
-        '
-        'dgvFarmacias
-        '
-        Me.dgvFarmacias.AllowUserToResizeColumns = False
-        Me.dgvFarmacias.AllowUserToResizeRows = False
-        Me.dgvFarmacias.AutoGenerateColumns = False
-        Me.dgvFarmacias.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvFarmacias.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvFarmacias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvFarmacias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFarmacias.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdFarmaciaDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn2})
-        Me.dgvFarmacias.DataSource = Me.FarmaciaDatos
-        Me.dgvFarmacias.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvFarmacias.Location = New System.Drawing.Point(0, 0)
-        Me.dgvFarmacias.MultiSelect = False
-        Me.dgvFarmacias.Name = "dgvFarmacias"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvFarmacias.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvFarmacias.RowHeadersVisible = False
-        Me.dgvFarmacias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFarmacias.Size = New System.Drawing.Size(831, 334)
-        Me.dgvFarmacias.TabIndex = 0
-        '
-        'IdFarmaciaDataGridViewTextBoxColumn
-        '
-        Me.IdFarmaciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdFarmaciaDataGridViewTextBoxColumn.DataPropertyName = "idFarmacia"
-        Me.IdFarmaciaDataGridViewTextBoxColumn.HeaderText = "Farmacia"
-        Me.IdFarmaciaDataGridViewTextBoxColumn.Name = "IdFarmaciaDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn2
-        '
-        Me.DireccionDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DireccionDataGridViewTextBoxColumn2.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn2.HeaderText = "Dirección"
-        Me.DireccionDataGridViewTextBoxColumn2.Name = "DireccionDataGridViewTextBoxColumn2"
-        '
-        'IconosPestañas
-        '
-        Me.IconosPestañas.ImageStream = CType(resources.GetObject("IconosPestañas.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.IconosPestañas.TransparentColor = System.Drawing.Color.Transparent
-        Me.IconosPestañas.Images.SetKeyName(0, "medicos.png")
-        Me.IconosPestañas.Images.SetKeyName(1, "farmaceuticos.png")
-        Me.IconosPestañas.Images.SetKeyName(2, "pacientes.png")
-        Me.IconosPestañas.Images.SetKeyName(3, "medicamentos.png")
-        Me.IconosPestañas.Images.SetKeyName(4, "trabajo.png")
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'Administracion
         '
@@ -798,6 +832,7 @@ Partial Class Administracion
         CType(Me.dgvAmbulatorios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpFarmacias.ResumeLayout(False)
         CType(Me.dgvFarmacias, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrupoEquivalenciasDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -828,38 +863,24 @@ Partial Class Administracion
     Friend WithEvents dgvAmbulatorios As System.Windows.Forms.DataGridView
     Friend WithEvents tpFarmacias As System.Windows.Forms.TabPage
     Friend WithEvents dgvFarmacias As System.Windows.Forms.DataGridView
+    Friend WithEvents IdFarmaciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdAmbulatorioDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IconosPestañas As System.Windows.Forms.ImageList
+    Friend WithEvents RecetaAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador
+    Friend WithEvents GrupoEquivalenciasDatos As System.Windows.Forms.BindingSource
+    Friend WithEvents GrupoEquivalenciasAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.GrupoEquivalenciasAdaptador
     Friend WithEvents CNMedicamentoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DenominacionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GrupoEquivalenciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GrupoEquivalencia As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents DosisDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ViaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FormatoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NumeroEnvaseDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Posologia As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IdFarmaciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DireccionDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IdAmbulatorioDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DireccionDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NumeroFacultativoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PasswordDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ApellidosDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DNIDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FirmaElectronicaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EmailDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DireccionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CualificacionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents LugarTrabajoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NumeroColegiadoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PasswordDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ApellidosDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DNIDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents UltimoRegistroDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NumeroFarmaciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NumeroTarjetaSanitariaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ApellidosDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -872,5 +893,22 @@ Partial Class Administracion
     Friend WithEvents EntidadDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents Acumulado As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents HistorialDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IconosPestañas As System.Windows.Forms.ImageList
+    Friend WithEvents NumeroFacultativoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DNIDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FirmaElectronicaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CualificacionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents LugarTrabajoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents NumeroColegiadoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DNIDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents UltimoRegistroDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NumeroFarmaciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
 End Class
