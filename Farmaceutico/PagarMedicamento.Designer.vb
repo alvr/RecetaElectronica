@@ -28,28 +28,28 @@ Partial Class PagarMedicamento
         Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
         Me.MedicamentoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.MedicamentoAdaptador()
         Me.PacienteAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.PacienteAdaptador()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.gbMedicamento = New System.Windows.Forms.GroupBox()
         Me.dtpReceta = New System.Windows.Forms.DateTimePicker()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.lbFecha = New System.Windows.Forms.Label()
         Me.tbNumeroEnvase = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
+        Me.lbEnvase = New System.Windows.Forms.Label()
         Me.tbFormato = New System.Windows.Forms.TextBox()
-        Me.Label29 = New System.Windows.Forms.Label()
+        Me.lbFormato = New System.Windows.Forms.Label()
         Me.tbVia = New System.Windows.Forms.TextBox()
-        Me.Label30 = New System.Windows.Forms.Label()
+        Me.lbVia = New System.Windows.Forms.Label()
         Me.tbDosis = New System.Windows.Forms.TextBox()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.lbDosis = New System.Windows.Forms.Label()
         Me.tbDenominacion = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
+        Me.lbDenominacion = New System.Windows.Forms.Label()
         Me.tbGrupoEquivalencia = New System.Windows.Forms.TextBox()
-        Me.Label33 = New System.Windows.Forms.Label()
+        Me.lbEquivalencia = New System.Windows.Forms.Label()
         Me.tbNombreMedicamento = New System.Windows.Forms.TextBox()
-        Me.Label34 = New System.Windows.Forms.Label()
+        Me.lbMedicamento = New System.Windows.Forms.Label()
         Me.tbMedicamento = New System.Windows.Forms.TextBox()
-        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbNumMedicamento = New System.Windows.Forms.Label()
         Me.Farmacia_MedicamentoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.Farmacia_MedicamentoAdaptador()
         Me.FarmaceuticoAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.FarmaceuticoAdaptador()
-        Me.GroupBox4.SuspendLayout()
+        Me.gbMedicamento.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnPagar
@@ -84,32 +84,32 @@ Partial Class PagarMedicamento
         '
         Me.PacienteAdaptador.ClearBeforeFill = True
         '
-        'GroupBox4
+        'gbMedicamento
         '
-        Me.GroupBox4.Controls.Add(Me.dtpReceta)
-        Me.GroupBox4.Controls.Add(Me.Label27)
-        Me.GroupBox4.Controls.Add(Me.tbNumeroEnvase)
-        Me.GroupBox4.Controls.Add(Me.Label28)
-        Me.GroupBox4.Controls.Add(Me.tbFormato)
-        Me.GroupBox4.Controls.Add(Me.Label29)
-        Me.GroupBox4.Controls.Add(Me.tbVia)
-        Me.GroupBox4.Controls.Add(Me.Label30)
-        Me.GroupBox4.Controls.Add(Me.tbDosis)
-        Me.GroupBox4.Controls.Add(Me.Label31)
-        Me.GroupBox4.Controls.Add(Me.tbDenominacion)
-        Me.GroupBox4.Controls.Add(Me.Label32)
-        Me.GroupBox4.Controls.Add(Me.tbGrupoEquivalencia)
-        Me.GroupBox4.Controls.Add(Me.Label33)
-        Me.GroupBox4.Controls.Add(Me.tbNombreMedicamento)
-        Me.GroupBox4.Controls.Add(Me.Label34)
-        Me.GroupBox4.Controls.Add(Me.tbMedicamento)
-        Me.GroupBox4.Controls.Add(Me.Label35)
-        Me.GroupBox4.Location = New System.Drawing.Point(51, 12)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(372, 159)
-        Me.GroupBox4.TabIndex = 3
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Datos Medicamento"
+        Me.gbMedicamento.Controls.Add(Me.dtpReceta)
+        Me.gbMedicamento.Controls.Add(Me.lbFecha)
+        Me.gbMedicamento.Controls.Add(Me.tbNumeroEnvase)
+        Me.gbMedicamento.Controls.Add(Me.lbEnvase)
+        Me.gbMedicamento.Controls.Add(Me.tbFormato)
+        Me.gbMedicamento.Controls.Add(Me.lbFormato)
+        Me.gbMedicamento.Controls.Add(Me.tbVia)
+        Me.gbMedicamento.Controls.Add(Me.lbVia)
+        Me.gbMedicamento.Controls.Add(Me.tbDosis)
+        Me.gbMedicamento.Controls.Add(Me.lbDosis)
+        Me.gbMedicamento.Controls.Add(Me.tbDenominacion)
+        Me.gbMedicamento.Controls.Add(Me.lbDenominacion)
+        Me.gbMedicamento.Controls.Add(Me.tbGrupoEquivalencia)
+        Me.gbMedicamento.Controls.Add(Me.lbEquivalencia)
+        Me.gbMedicamento.Controls.Add(Me.tbNombreMedicamento)
+        Me.gbMedicamento.Controls.Add(Me.lbMedicamento)
+        Me.gbMedicamento.Controls.Add(Me.tbMedicamento)
+        Me.gbMedicamento.Controls.Add(Me.lbNumMedicamento)
+        Me.gbMedicamento.Location = New System.Drawing.Point(51, 12)
+        Me.gbMedicamento.Name = "gbMedicamento"
+        Me.gbMedicamento.Size = New System.Drawing.Size(372, 159)
+        Me.gbMedicamento.TabIndex = 3
+        Me.gbMedicamento.TabStop = False
+        Me.gbMedicamento.Text = "Datos Medicamento"
         '
         'dtpReceta
         '
@@ -120,14 +120,14 @@ Partial Class PagarMedicamento
         Me.dtpReceta.Size = New System.Drawing.Size(115, 20)
         Me.dtpReceta.TabIndex = 17
         '
-        'Label27
+        'lbFecha
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(6, 129)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(40, 13)
-        Me.Label27.TabIndex = 16
-        Me.Label27.Text = "Fecha:"
+        Me.lbFecha.AutoSize = True
+        Me.lbFecha.Location = New System.Drawing.Point(6, 129)
+        Me.lbFecha.Name = "lbFecha"
+        Me.lbFecha.Size = New System.Drawing.Size(40, 13)
+        Me.lbFecha.TabIndex = 16
+        Me.lbFecha.Text = "Fecha:"
         '
         'tbNumeroEnvase
         '
@@ -137,14 +137,14 @@ Partial Class PagarMedicamento
         Me.tbNumeroEnvase.Size = New System.Drawing.Size(100, 20)
         Me.tbNumeroEnvase.TabIndex = 15
         '
-        'Label28
+        'lbEnvase
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(177, 101)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(74, 13)
-        Me.Label28.TabIndex = 14
-        Me.Label28.Text = "Núm. Envase:"
+        Me.lbEnvase.AutoSize = True
+        Me.lbEnvase.Location = New System.Drawing.Point(177, 101)
+        Me.lbEnvase.Name = "lbEnvase"
+        Me.lbEnvase.Size = New System.Drawing.Size(74, 13)
+        Me.lbEnvase.TabIndex = 14
+        Me.lbEnvase.Text = "Núm. Envase:"
         '
         'tbFormato
         '
@@ -154,14 +154,14 @@ Partial Class PagarMedicamento
         Me.tbFormato.Size = New System.Drawing.Size(100, 20)
         Me.tbFormato.TabIndex = 13
         '
-        'Label29
+        'lbFormato
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(6, 101)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(48, 13)
-        Me.Label29.TabIndex = 12
-        Me.Label29.Text = "Formato:"
+        Me.lbFormato.AutoSize = True
+        Me.lbFormato.Location = New System.Drawing.Point(6, 101)
+        Me.lbFormato.Name = "lbFormato"
+        Me.lbFormato.Size = New System.Drawing.Size(48, 13)
+        Me.lbFormato.TabIndex = 12
+        Me.lbFormato.Text = "Formato:"
         '
         'tbVia
         '
@@ -171,14 +171,14 @@ Partial Class PagarMedicamento
         Me.tbVia.Size = New System.Drawing.Size(100, 20)
         Me.tbVia.TabIndex = 11
         '
-        'Label30
+        'lbVia
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(224, 72)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(27, 13)
-        Me.Label30.TabIndex = 10
-        Me.Label30.Text = "Vía:"
+        Me.lbVia.AutoSize = True
+        Me.lbVia.Location = New System.Drawing.Point(224, 72)
+        Me.lbVia.Name = "lbVia"
+        Me.lbVia.Size = New System.Drawing.Size(27, 13)
+        Me.lbVia.TabIndex = 10
+        Me.lbVia.Text = "Vía:"
         '
         'tbDosis
         '
@@ -188,14 +188,14 @@ Partial Class PagarMedicamento
         Me.tbDosis.Size = New System.Drawing.Size(100, 20)
         Me.tbDosis.TabIndex = 9
         '
-        'Label31
+        'lbDosis
         '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(6, 72)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(36, 13)
-        Me.Label31.TabIndex = 8
-        Me.Label31.Text = "Dosis:"
+        Me.lbDosis.AutoSize = True
+        Me.lbDosis.Location = New System.Drawing.Point(6, 72)
+        Me.lbDosis.Name = "lbDosis"
+        Me.lbDosis.Size = New System.Drawing.Size(36, 13)
+        Me.lbDosis.TabIndex = 8
+        Me.lbDosis.Text = "Dosis:"
         '
         'tbDenominacion
         '
@@ -205,14 +205,14 @@ Partial Class PagarMedicamento
         Me.tbDenominacion.Size = New System.Drawing.Size(100, 20)
         Me.tbDenominacion.TabIndex = 7
         '
-        'Label32
+        'lbDenominacion
         '
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(173, 44)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(78, 13)
-        Me.Label32.TabIndex = 6
-        Me.Label32.Text = "Denominación:"
+        Me.lbDenominacion.AutoSize = True
+        Me.lbDenominacion.Location = New System.Drawing.Point(173, 44)
+        Me.lbDenominacion.Name = "lbDenominacion"
+        Me.lbDenominacion.Size = New System.Drawing.Size(78, 13)
+        Me.lbDenominacion.TabIndex = 6
+        Me.lbDenominacion.Text = "Denominación:"
         '
         'tbGrupoEquivalencia
         '
@@ -222,14 +222,14 @@ Partial Class PagarMedicamento
         Me.tbGrupoEquivalencia.Size = New System.Drawing.Size(83, 20)
         Me.tbGrupoEquivalencia.TabIndex = 5
         '
-        'Label33
+        'lbEquivalencia
         '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(6, 44)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(58, 13)
-        Me.Label33.TabIndex = 4
-        Me.Label33.Text = "Grupo Eq.:"
+        Me.lbEquivalencia.AutoSize = True
+        Me.lbEquivalencia.Location = New System.Drawing.Point(6, 44)
+        Me.lbEquivalencia.Name = "lbEquivalencia"
+        Me.lbEquivalencia.Size = New System.Drawing.Size(58, 13)
+        Me.lbEquivalencia.TabIndex = 4
+        Me.lbEquivalencia.Text = "Grupo Eq.:"
         '
         'tbNombreMedicamento
         '
@@ -239,14 +239,14 @@ Partial Class PagarMedicamento
         Me.tbNombreMedicamento.Size = New System.Drawing.Size(100, 20)
         Me.tbNombreMedicamento.TabIndex = 3
         '
-        'Label34
+        'lbMedicamento
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(204, 16)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(47, 13)
-        Me.Label34.TabIndex = 2
-        Me.Label34.Text = "Nombre:"
+        Me.lbMedicamento.AutoSize = True
+        Me.lbMedicamento.Location = New System.Drawing.Point(204, 16)
+        Me.lbMedicamento.Name = "lbMedicamento"
+        Me.lbMedicamento.Size = New System.Drawing.Size(47, 13)
+        Me.lbMedicamento.TabIndex = 2
+        Me.lbMedicamento.Text = "Nombre:"
         '
         'tbMedicamento
         '
@@ -256,14 +256,14 @@ Partial Class PagarMedicamento
         Me.tbMedicamento.Size = New System.Drawing.Size(100, 20)
         Me.tbMedicamento.TabIndex = 1
         '
-        'Label35
+        'lbNumMedicamento
         '
-        Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(4, 16)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(88, 13)
-        Me.Label35.TabIndex = 0
-        Me.Label35.Text = "N. Medicamento:"
+        Me.lbNumMedicamento.AutoSize = True
+        Me.lbNumMedicamento.Location = New System.Drawing.Point(4, 16)
+        Me.lbNumMedicamento.Name = "lbNumMedicamento"
+        Me.lbNumMedicamento.Size = New System.Drawing.Size(88, 13)
+        Me.lbNumMedicamento.TabIndex = 0
+        Me.lbNumMedicamento.Text = "N. Medicamento:"
         '
         'Farmacia_MedicamentoAdaptador
         '
@@ -278,15 +278,15 @@ Partial Class PagarMedicamento
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(475, 348)
-        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.gbMedicamento)
         Me.Controls.Add(Me.lbPrecio)
         Me.Controls.Add(Me.btnPagar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PagarMedicamento"
         Me.Text = "Pagar Medicamento"
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        Me.gbMedicamento.ResumeLayout(False)
+        Me.gbMedicamento.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -296,25 +296,25 @@ Partial Class PagarMedicamento
     Friend WithEvents RecetaAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador
     Friend WithEvents MedicamentoAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.MedicamentoAdaptador
     Friend WithEvents PacienteAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.PacienteAdaptador
-    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents gbMedicamento As System.Windows.Forms.GroupBox
     Friend WithEvents dtpReceta As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents lbFecha As System.Windows.Forms.Label
     Friend WithEvents tbNumeroEnvase As System.Windows.Forms.TextBox
-    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents lbEnvase As System.Windows.Forms.Label
     Friend WithEvents tbFormato As System.Windows.Forms.TextBox
-    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents lbFormato As System.Windows.Forms.Label
     Friend WithEvents tbVia As System.Windows.Forms.TextBox
-    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents lbVia As System.Windows.Forms.Label
     Friend WithEvents tbDosis As System.Windows.Forms.TextBox
-    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents lbDosis As System.Windows.Forms.Label
     Friend WithEvents tbDenominacion As System.Windows.Forms.TextBox
-    Friend WithEvents Label32 As System.Windows.Forms.Label
+    Friend WithEvents lbDenominacion As System.Windows.Forms.Label
     Friend WithEvents tbGrupoEquivalencia As System.Windows.Forms.TextBox
-    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents lbEquivalencia As System.Windows.Forms.Label
     Friend WithEvents tbNombreMedicamento As System.Windows.Forms.TextBox
-    Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents lbMedicamento As System.Windows.Forms.Label
     Friend WithEvents tbMedicamento As System.Windows.Forms.TextBox
-    Friend WithEvents Label35 As System.Windows.Forms.Label
+    Friend WithEvents lbNumMedicamento As System.Windows.Forms.Label
     Friend WithEvents Farmacia_MedicamentoAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.Farmacia_MedicamentoAdaptador
     Friend WithEvents FarmaceuticoAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.FarmaceuticoAdaptador
 End Class
