@@ -44,7 +44,7 @@
                 End If
             Else
                 PagarMedicamento.Receta = tbCodReceta.Text
-                PagarMedicamento.Medicamento = tbNumMedicamento.Text
+                PagarMedicamento.Medicamento = tbMedicamento.Text
                 PagarMedicamento.Show()
             End If
         End If

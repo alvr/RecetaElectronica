@@ -24,15 +24,15 @@ Partial Class Administracion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administracion))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MedicoDatos = New System.Windows.Forms.BindingSource(Me.components)
         Me.dbRecetaElectronica = New RecetaElectronica.dbRecetaElectronica()
         Me.FarmaceuticoDatos = New System.Windows.Forms.BindingSource(Me.components)
@@ -50,28 +50,34 @@ Partial Class Administracion
         Me.tcAdministracion = New System.Windows.Forms.TabControl()
         Me.tpMedicos = New System.Windows.Forms.TabPage()
         Me.dgvMedicos = New System.Windows.Forms.DataGridView()
-        Me.NumeroFacultativoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNIDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirmaElectronicaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CualificacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.LugarTrabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.tpFarmaceuticos = New System.Windows.Forms.TabPage()
         Me.dgvFarmaceuticos = New System.Windows.Forms.DataGridView()
-        Me.NumeroColegiadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UltimoRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.tpPacientes = New System.Windows.Forms.TabPage()
         Me.dgvPacientes = New System.Windows.Forms.DataGridView()
+        Me.tpMedicamentos = New System.Windows.Forms.TabPage()
+        Me.dgvMedicamentos = New System.Windows.Forms.DataGridView()
+        Me.tpAmbulatorios = New System.Windows.Forms.TabPage()
+        Me.dgvAmbulatorios = New System.Windows.Forms.DataGridView()
+        Me.IdAmbulatorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tpFarmacias = New System.Windows.Forms.TabPage()
+        Me.dgvFarmacias = New System.Windows.Forms.DataGridView()
+        Me.IdFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
+        Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
+        Me.GrupoEquivalenciasDatos = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GrupoEquivalenciasAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.GrupoEquivalenciasAdaptador()
+        Me.CNMedicamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DenominacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GrupoEquivalencia = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DosisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FormatoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroEnvaseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Posologia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidosDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -84,38 +90,24 @@ Partial Class Administracion
         Me.EntidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.Acumulado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HistorialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tpMedicamentos = New System.Windows.Forms.TabPage()
-        Me.dgvMedicamentos = New System.Windows.Forms.DataGridView()
-        Me.GrupoEquivalenciasDatos = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tpAmbulatorios = New System.Windows.Forms.TabPage()
-        Me.dgvAmbulatorios = New System.Windows.Forms.DataGridView()
-        Me.IdAmbulatorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tpFarmacias = New System.Windows.Forms.TabPage()
-        Me.dgvFarmacias = New System.Windows.Forms.DataGridView()
-        Me.IdFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IconosPestañas = New System.Windows.Forms.ImageList(Me.components)
-        Me.RecetaAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador()
-        Me.GrupoEquivalenciasAdaptador = New RecetaElectronica.dbRecetaElectronicaTableAdapters.GrupoEquivalenciasAdaptador()
-        Me.tpGrupoEquivalencias = New System.Windows.Forms.TabPage()
-        Me.TableAdapterManager = New RecetaElectronica.dbRecetaElectronicaTableAdapters.TableAdapterManager()
-        Me.GrupoEquivalenciasDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CNMedicamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DenominacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GrupoEquivalencia = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.DosisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ViaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FormatoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroEnvaseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Posologia = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroFacultativoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DNIDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirmaElectronicaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CualificacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.LugarTrabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.NumeroColegiadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DNIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UltimoRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         CType(Me.MedicoDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dbRecetaElectronica, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FarmaceuticoDatos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -132,13 +124,11 @@ Partial Class Administracion
         CType(Me.dgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpMedicamentos.SuspendLayout()
         CType(Me.dgvMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GrupoEquivalenciasDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpAmbulatorios.SuspendLayout()
         CType(Me.dgvAmbulatorios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpFarmacias.SuspendLayout()
         CType(Me.dgvFarmacias, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tpGrupoEquivalencias.SuspendLayout()
-        CType(Me.GrupoEquivalenciasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrupoEquivalenciasDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MedicoDatos
@@ -221,7 +211,6 @@ Partial Class Administracion
         Me.tcAdministracion.Controls.Add(Me.tpFarmaceuticos)
         Me.tcAdministracion.Controls.Add(Me.tpPacientes)
         Me.tcAdministracion.Controls.Add(Me.tpMedicamentos)
-        Me.tcAdministracion.Controls.Add(Me.tpGrupoEquivalencias)
         Me.tcAdministracion.Controls.Add(Me.tpAmbulatorios)
         Me.tcAdministracion.Controls.Add(Me.tpFarmacias)
         Me.tcAdministracion.ImageList = Me.IconosPestañas
@@ -269,84 +258,6 @@ Partial Class Administracion
         Me.dgvMedicos.Size = New System.Drawing.Size(831, 334)
         Me.dgvMedicos.TabIndex = 0
         '
-        'NumeroFacultativoDataGridViewTextBoxColumn
-        '
-        Me.NumeroFacultativoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NumeroFacultativoDataGridViewTextBoxColumn.DataPropertyName = "NumeroFacultativo"
-        Me.NumeroFacultativoDataGridViewTextBoxColumn.HeaderText = "Número Facultativo"
-        Me.NumeroFacultativoDataGridViewTextBoxColumn.Name = "NumeroFacultativoDataGridViewTextBoxColumn"
-        Me.NumeroFacultativoDataGridViewTextBoxColumn.Width = 124
-        '
-        'PasswordDataGridViewTextBoxColumn1
-        '
-        Me.PasswordDataGridViewTextBoxColumn1.DataPropertyName = "Password"
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Highlight
-        Me.PasswordDataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.PasswordDataGridViewTextBoxColumn1.HeaderText = "Contraseña"
-        Me.PasswordDataGridViewTextBoxColumn1.Name = "PasswordDataGridViewTextBoxColumn1"
-        '
-        'NombreDataGridViewTextBoxColumn1
-        '
-        Me.NombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn1.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn1.Name = "NombreDataGridViewTextBoxColumn1"
-        '
-        'ApellidosDataGridViewTextBoxColumn1
-        '
-        Me.ApellidosDataGridViewTextBoxColumn1.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn1.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn1.Name = "ApellidosDataGridViewTextBoxColumn1"
-        '
-        'DNIDataGridViewTextBoxColumn1
-        '
-        Me.DNIDataGridViewTextBoxColumn1.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn1.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn1.Name = "DNIDataGridViewTextBoxColumn1"
-        '
-        'FirmaElectronicaDataGridViewTextBoxColumn
-        '
-        Me.FirmaElectronicaDataGridViewTextBoxColumn.DataPropertyName = "FirmaElectronica"
-        Me.FirmaElectronicaDataGridViewTextBoxColumn.HeaderText = "Firma Electrónica"
-        Me.FirmaElectronicaDataGridViewTextBoxColumn.Name = "FirmaElectronicaDataGridViewTextBoxColumn"
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        '
-        'CualificacionDataGridViewTextBoxColumn
-        '
-        Me.CualificacionDataGridViewTextBoxColumn.DataPropertyName = "Cualificacion"
-        Me.CualificacionDataGridViewTextBoxColumn.HeaderText = "Cualificación"
-        Me.CualificacionDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Médico", "Odontólogo", "Podólogo", "Enfermero"})
-        Me.CualificacionDataGridViewTextBoxColumn.Name = "CualificacionDataGridViewTextBoxColumn"
-        Me.CualificacionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CualificacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'LugarTrabajoDataGridViewTextBoxColumn
-        '
-        Me.LugarTrabajoDataGridViewTextBoxColumn.DataPropertyName = "LugarTrabajo"
-        Me.LugarTrabajoDataGridViewTextBoxColumn.DataSource = Me.AmbulatorioDatos
-        Me.LugarTrabajoDataGridViewTextBoxColumn.DisplayMember = "idAmbulatorio"
-        Me.LugarTrabajoDataGridViewTextBoxColumn.HeaderText = "Lugar de Trabajo"
-        Me.LugarTrabajoDataGridViewTextBoxColumn.Name = "LugarTrabajoDataGridViewTextBoxColumn"
-        Me.LugarTrabajoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.LugarTrabajoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'tpFarmaceuticos
         '
         Me.tpFarmaceuticos.Controls.Add(Me.dgvFarmaceuticos)
@@ -384,62 +295,6 @@ Partial Class Administracion
         Me.dgvFarmaceuticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFarmaceuticos.Size = New System.Drawing.Size(831, 334)
         Me.dgvFarmaceuticos.TabIndex = 0
-        '
-        'NumeroColegiadoDataGridViewTextBoxColumn
-        '
-        Me.NumeroColegiadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NumeroColegiadoDataGridViewTextBoxColumn.DataPropertyName = "NumeroColegiado"
-        Me.NumeroColegiadoDataGridViewTextBoxColumn.HeaderText = "Número Colegiado"
-        Me.NumeroColegiadoDataGridViewTextBoxColumn.Name = "NumeroColegiadoDataGridViewTextBoxColumn"
-        '
-        'PasswordDataGridViewTextBoxColumn
-        '
-        Me.PasswordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Highlight
-        Me.PasswordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
-        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Contraseña"
-        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        '
-        'DNIDataGridViewTextBoxColumn
-        '
-        Me.DNIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DNIDataGridViewTextBoxColumn.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn.Name = "DNIDataGridViewTextBoxColumn"
-        '
-        'UltimoRegistroDataGridViewTextBoxColumn
-        '
-        Me.UltimoRegistroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.UltimoRegistroDataGridViewTextBoxColumn.DataPropertyName = "UltimoRegistro"
-        Me.UltimoRegistroDataGridViewTextBoxColumn.HeaderText = "Último Registro"
-        Me.UltimoRegistroDataGridViewTextBoxColumn.Name = "UltimoRegistroDataGridViewTextBoxColumn"
-        '
-        'NumeroFarmaciaDataGridViewTextBoxColumn
-        '
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DataPropertyName = "NumeroFarmacia"
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DataSource = Me.FarmaciaDatos
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DisplayMember = "idFarmacia"
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.HeaderText = "Número Farmacia"
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.Name = "NumeroFarmaciaDataGridViewTextBoxColumn"
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.NumeroFarmaciaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'tpPacientes
         '
@@ -479,89 +334,6 @@ Partial Class Administracion
         Me.dgvPacientes.Size = New System.Drawing.Size(831, 334)
         Me.dgvPacientes.TabIndex = 0
         '
-        'NumeroTarjetaSanitariaDataGridViewTextBoxColumn
-        '
-        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.DataPropertyName = "NumeroTarjetaSanitaria"
-        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.HeaderText = "Tarjeta Sanitaria"
-        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.Name = "NumeroTarjetaSanitariaDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn2
-        '
-        Me.NombreDataGridViewTextBoxColumn2.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn2.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn2.Name = "NombreDataGridViewTextBoxColumn2"
-        '
-        'ApellidosDataGridViewTextBoxColumn2
-        '
-        Me.ApellidosDataGridViewTextBoxColumn2.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn2.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn2.Name = "ApellidosDataGridViewTextBoxColumn2"
-        '
-        'DNIDataGridViewTextBoxColumn2
-        '
-        Me.DNIDataGridViewTextBoxColumn2.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn2.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn2.Name = "DNIDataGridViewTextBoxColumn2"
-        '
-        'FechaNacimientoDataGridViewTextBoxColumn
-        '
-        Me.FechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nacimiento"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.Name = "FechaNacimientoDataGridViewTextBoxColumn"
-        '
-        'CronicoDataGridViewCheckBoxColumn
-        '
-        Me.CronicoDataGridViewCheckBoxColumn.DataPropertyName = "Cronico"
-        Me.CronicoDataGridViewCheckBoxColumn.HeaderText = "Crónico"
-        Me.CronicoDataGridViewCheckBoxColumn.Name = "CronicoDataGridViewCheckBoxColumn"
-        '
-        'ExentoAportacion
-        '
-        Me.ExentoAportacion.DataPropertyName = "ExentoAportacion"
-        Me.ExentoAportacion.HeaderText = "Exento Aportación"
-        Me.ExentoAportacion.Name = "ExentoAportacion"
-        '
-        'BaremoEconomicoDataGridViewTextBoxColumn
-        '
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.DataPropertyName = "BaremoEconomico"
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.HeaderText = "Baremo Económico"
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.Items.AddRange(New Object() {"<18.000", "18.000-100.000", ">100.000"})
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.Name = "BaremoEconomicoDataGridViewTextBoxColumn"
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BaremoEconomicoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'SituacionLaboralDataGridViewTextBoxColumn
-        '
-        Me.SituacionLaboralDataGridViewTextBoxColumn.DataPropertyName = "SituacionLaboral"
-        Me.SituacionLaboralDataGridViewTextBoxColumn.HeaderText = "Situación Laboral"
-        Me.SituacionLaboralDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Activo", "Pensionista", "Mutualidad"})
-        Me.SituacionLaboralDataGridViewTextBoxColumn.Name = "SituacionLaboralDataGridViewTextBoxColumn"
-        Me.SituacionLaboralDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SituacionLaboralDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'EntidadDataGridViewTextBoxColumn
-        '
-        Me.EntidadDataGridViewTextBoxColumn.DataPropertyName = "Entidad"
-        Me.EntidadDataGridViewTextBoxColumn.HeaderText = "Entidad"
-        Me.EntidadDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Seguridad Social", "Muface", "Isfas", "Mutualidad General Judicial"})
-        Me.EntidadDataGridViewTextBoxColumn.Name = "EntidadDataGridViewTextBoxColumn"
-        Me.EntidadDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EntidadDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'Acumulado
-        '
-        Me.Acumulado.DataPropertyName = "Acumulado"
-        Me.Acumulado.HeaderText = "Acumulado"
-        Me.Acumulado.Name = "Acumulado"
-        '
-        'HistorialDataGridViewTextBoxColumn
-        '
-        Me.HistorialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.HistorialDataGridViewTextBoxColumn.DataPropertyName = "Historial"
-        Me.HistorialDataGridViewTextBoxColumn.HeaderText = "Historial"
-        Me.HistorialDataGridViewTextBoxColumn.Name = "HistorialDataGridViewTextBoxColumn"
-        Me.HistorialDataGridViewTextBoxColumn.Width = 69
-        '
         'tpMedicamentos
         '
         Me.tpMedicamentos.Controls.Add(Me.dgvMedicamentos)
@@ -599,11 +371,6 @@ Partial Class Administracion
         Me.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvMedicamentos.Size = New System.Drawing.Size(831, 334)
         Me.dgvMedicamentos.TabIndex = 0
-        '
-        'GrupoEquivalenciasDatos
-        '
-        Me.GrupoEquivalenciasDatos.DataMember = "GrupoEquivalencias"
-        Me.GrupoEquivalenciasDatos.DataSource = Me.dbRecetaElectronica
         '
         'tpAmbulatorios
         '
@@ -726,96 +493,19 @@ Partial Class Administracion
         Me.IconosPestañas.Images.SetKeyName(2, "pacientes.png")
         Me.IconosPestañas.Images.SetKeyName(3, "medicamentos.png")
         Me.IconosPestañas.Images.SetKeyName(4, "trabajo.png")
-        Me.IconosPestañas.Images.SetKeyName(5, "grupo_equivalencias.png")
         '
         'RecetaAdaptador
         '
         Me.RecetaAdaptador.ClearBeforeFill = True
         '
+        'GrupoEquivalenciasDatos
+        '
+        Me.GrupoEquivalenciasDatos.DataMember = "GrupoEquivalencias"
+        Me.GrupoEquivalenciasDatos.DataSource = Me.dbRecetaElectronica
+        '
         'GrupoEquivalenciasAdaptador
         '
         Me.GrupoEquivalenciasAdaptador.ClearBeforeFill = True
-        '
-        'tpGrupoEquivalencias
-        '
-        Me.tpGrupoEquivalencias.Controls.Add(Me.GrupoEquivalenciasDataGridView)
-        Me.tpGrupoEquivalencias.ImageIndex = 5
-        Me.tpGrupoEquivalencias.Location = New System.Drawing.Point(4, 23)
-        Me.tpGrupoEquivalencias.Name = "tpGrupoEquivalencias"
-        Me.tpGrupoEquivalencias.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpGrupoEquivalencias.Size = New System.Drawing.Size(831, 334)
-        Me.tpGrupoEquivalencias.TabIndex = 8
-        Me.tpGrupoEquivalencias.Text = "Grupo Equivalencias"
-        Me.tpGrupoEquivalencias.UseVisualStyleBackColor = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AdministradorAdaptador = Nothing
-        Me.TableAdapterManager.AmbulatorioAdaptador = Me.AmbulatorioAdaptador
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.FarmaceuticoAdaptador = Me.FarmaceuticoAdaptador
-        Me.TableAdapterManager.Farmacia_MedicamentoAdaptador = Nothing
-        Me.TableAdapterManager.FarmaciaAdaptador = Me.FarmaciaAdaptador
-        Me.TableAdapterManager.GrupoEquivalenciasAdaptador = Me.GrupoEquivalenciasAdaptador
-        Me.TableAdapterManager.MedicamentoAdaptador = Me.MedicamentoAdaptador
-        Me.TableAdapterManager.MedicoAdaptador = Me.MedicoAdaptador
-        Me.TableAdapterManager.PacienteAdaptador = Me.PacienteAdaptador
-        Me.TableAdapterManager.RecetaAdaptador = Me.RecetaAdaptador
-        Me.TableAdapterManager.Recetas_MedicoAdaptador = Nothing
-        Me.TableAdapterManager.UpdateOrder = RecetaElectronica.dbRecetaElectronicaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'GrupoEquivalenciasDataGridView
-        '
-        Me.GrupoEquivalenciasDataGridView.AllowUserToResizeRows = False
-        Me.GrupoEquivalenciasDataGridView.AutoGenerateColumns = False
-        Me.GrupoEquivalenciasDataGridView.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.GrupoEquivalenciasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.GrupoEquivalenciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GrupoEquivalenciasDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.GrupoEquivalenciasDataGridView.DataSource = Me.GrupoEquivalenciasDatos
-        Me.GrupoEquivalenciasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GrupoEquivalenciasDataGridView.Location = New System.Drawing.Point(3, 3)
-        Me.GrupoEquivalenciasDataGridView.MultiSelect = False
-        Me.GrupoEquivalenciasDataGridView.Name = "GrupoEquivalenciasDataGridView"
-        Me.GrupoEquivalenciasDataGridView.RowHeadersVisible = False
-        Me.GrupoEquivalenciasDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GrupoEquivalenciasDataGridView.Size = New System.Drawing.Size(825, 328)
-        Me.GrupoEquivalenciasDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "GrupoEquivalencias"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Grupo Equivalencias"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Descripcion"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Descripción"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Composicion"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Composición"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "FormaFarmaceutica"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Forma Farmacéutica"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "GrupoTerapeutico"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Grupo Terapéutico"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'CNMedicamentoDataGridViewTextBoxColumn
         '
@@ -895,6 +585,223 @@ Partial Class Administracion
         Me.Precio.Name = "Precio"
         Me.Precio.Width = 62
         '
+        'NumeroTarjetaSanitariaDataGridViewTextBoxColumn
+        '
+        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.DataPropertyName = "NumeroTarjetaSanitaria"
+        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.HeaderText = "Tarjeta Sanitaria"
+        Me.NumeroTarjetaSanitariaDataGridViewTextBoxColumn.Name = "NumeroTarjetaSanitariaDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn2
+        '
+        Me.NombreDataGridViewTextBoxColumn2.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn2.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn2.Name = "NombreDataGridViewTextBoxColumn2"
+        '
+        'ApellidosDataGridViewTextBoxColumn2
+        '
+        Me.ApellidosDataGridViewTextBoxColumn2.DataPropertyName = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn2.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn2.Name = "ApellidosDataGridViewTextBoxColumn2"
+        '
+        'DNIDataGridViewTextBoxColumn2
+        '
+        Me.DNIDataGridViewTextBoxColumn2.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn2.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn2.Name = "DNIDataGridViewTextBoxColumn2"
+        '
+        'FechaNacimientoDataGridViewTextBoxColumn
+        '
+        Me.FechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nacimiento"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.Name = "FechaNacimientoDataGridViewTextBoxColumn"
+        '
+        'CronicoDataGridViewCheckBoxColumn
+        '
+        Me.CronicoDataGridViewCheckBoxColumn.DataPropertyName = "Cronico"
+        Me.CronicoDataGridViewCheckBoxColumn.HeaderText = "Crónico"
+        Me.CronicoDataGridViewCheckBoxColumn.Name = "CronicoDataGridViewCheckBoxColumn"
+        '
+        'ExentoAportacion
+        '
+        Me.ExentoAportacion.DataPropertyName = "ExentoAportacion"
+        Me.ExentoAportacion.HeaderText = "Exento Aportación"
+        Me.ExentoAportacion.Name = "ExentoAportacion"
+        '
+        'BaremoEconomicoDataGridViewTextBoxColumn
+        '
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.DataPropertyName = "BaremoEconomico"
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.HeaderText = "Baremo Económico"
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.Items.AddRange(New Object() {"<18.000", "18.000-100.000", ">100.000"})
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.Name = "BaremoEconomicoDataGridViewTextBoxColumn"
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BaremoEconomicoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'SituacionLaboralDataGridViewTextBoxColumn
+        '
+        Me.SituacionLaboralDataGridViewTextBoxColumn.DataPropertyName = "SituacionLaboral"
+        Me.SituacionLaboralDataGridViewTextBoxColumn.HeaderText = "Situación Laboral"
+        Me.SituacionLaboralDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Activo", "Pensionista", "Mutualidad"})
+        Me.SituacionLaboralDataGridViewTextBoxColumn.Name = "SituacionLaboralDataGridViewTextBoxColumn"
+        Me.SituacionLaboralDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SituacionLaboralDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'EntidadDataGridViewTextBoxColumn
+        '
+        Me.EntidadDataGridViewTextBoxColumn.DataPropertyName = "Entidad"
+        Me.EntidadDataGridViewTextBoxColumn.HeaderText = "Entidad"
+        Me.EntidadDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Seguridad Social", "Muface", "Isfas", "Mutualidad General Judicial"})
+        Me.EntidadDataGridViewTextBoxColumn.Name = "EntidadDataGridViewTextBoxColumn"
+        Me.EntidadDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EntidadDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Acumulado
+        '
+        Me.Acumulado.DataPropertyName = "Acumulado"
+        Me.Acumulado.HeaderText = "Acumulado"
+        Me.Acumulado.Name = "Acumulado"
+        '
+        'HistorialDataGridViewTextBoxColumn
+        '
+        Me.HistorialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.HistorialDataGridViewTextBoxColumn.DataPropertyName = "Historial"
+        Me.HistorialDataGridViewTextBoxColumn.HeaderText = "Historial"
+        Me.HistorialDataGridViewTextBoxColumn.Name = "HistorialDataGridViewTextBoxColumn"
+        Me.HistorialDataGridViewTextBoxColumn.Width = 69
+        '
+        'NumeroFacultativoDataGridViewTextBoxColumn
+        '
+        Me.NumeroFacultativoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NumeroFacultativoDataGridViewTextBoxColumn.DataPropertyName = "NumeroFacultativo"
+        Me.NumeroFacultativoDataGridViewTextBoxColumn.HeaderText = "Número Facultativo"
+        Me.NumeroFacultativoDataGridViewTextBoxColumn.Name = "NumeroFacultativoDataGridViewTextBoxColumn"
+        Me.NumeroFacultativoDataGridViewTextBoxColumn.Width = 124
+        '
+        'PasswordDataGridViewTextBoxColumn1
+        '
+        Me.PasswordDataGridViewTextBoxColumn1.DataPropertyName = "Password"
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Highlight
+        Me.PasswordDataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.PasswordDataGridViewTextBoxColumn1.HeaderText = "Contraseña"
+        Me.PasswordDataGridViewTextBoxColumn1.Name = "PasswordDataGridViewTextBoxColumn1"
+        '
+        'NombreDataGridViewTextBoxColumn1
+        '
+        Me.NombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn1.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn1.Name = "NombreDataGridViewTextBoxColumn1"
+        '
+        'ApellidosDataGridViewTextBoxColumn1
+        '
+        Me.ApellidosDataGridViewTextBoxColumn1.DataPropertyName = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn1.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn1.Name = "ApellidosDataGridViewTextBoxColumn1"
+        '
+        'DNIDataGridViewTextBoxColumn1
+        '
+        Me.DNIDataGridViewTextBoxColumn1.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn1.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn1.Name = "DNIDataGridViewTextBoxColumn1"
+        '
+        'FirmaElectronicaDataGridViewTextBoxColumn
+        '
+        Me.FirmaElectronicaDataGridViewTextBoxColumn.DataPropertyName = "FirmaElectronica"
+        Me.FirmaElectronicaDataGridViewTextBoxColumn.HeaderText = "Firma Electrónica"
+        Me.FirmaElectronicaDataGridViewTextBoxColumn.Name = "FirmaElectronicaDataGridViewTextBoxColumn"
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'CualificacionDataGridViewTextBoxColumn
+        '
+        Me.CualificacionDataGridViewTextBoxColumn.DataPropertyName = "Cualificacion"
+        Me.CualificacionDataGridViewTextBoxColumn.HeaderText = "Cualificación"
+        Me.CualificacionDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Médico", "Odontólogo", "Podólogo", "Enfermero"})
+        Me.CualificacionDataGridViewTextBoxColumn.Name = "CualificacionDataGridViewTextBoxColumn"
+        Me.CualificacionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CualificacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'LugarTrabajoDataGridViewTextBoxColumn
+        '
+        Me.LugarTrabajoDataGridViewTextBoxColumn.DataPropertyName = "LugarTrabajo"
+        Me.LugarTrabajoDataGridViewTextBoxColumn.DataSource = Me.AmbulatorioDatos
+        Me.LugarTrabajoDataGridViewTextBoxColumn.DisplayMember = "idAmbulatorio"
+        Me.LugarTrabajoDataGridViewTextBoxColumn.HeaderText = "Lugar de Trabajo"
+        Me.LugarTrabajoDataGridViewTextBoxColumn.Name = "LugarTrabajoDataGridViewTextBoxColumn"
+        Me.LugarTrabajoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.LugarTrabajoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'NumeroColegiadoDataGridViewTextBoxColumn
+        '
+        Me.NumeroColegiadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NumeroColegiadoDataGridViewTextBoxColumn.DataPropertyName = "NumeroColegiado"
+        Me.NumeroColegiadoDataGridViewTextBoxColumn.HeaderText = "Número Colegiado"
+        Me.NumeroColegiadoDataGridViewTextBoxColumn.Name = "NumeroColegiadoDataGridViewTextBoxColumn"
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Highlight
+        Me.PasswordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Contraseña"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        '
+        'DNIDataGridViewTextBoxColumn
+        '
+        Me.DNIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DNIDataGridViewTextBoxColumn.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn.Name = "DNIDataGridViewTextBoxColumn"
+        '
+        'UltimoRegistroDataGridViewTextBoxColumn
+        '
+        Me.UltimoRegistroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UltimoRegistroDataGridViewTextBoxColumn.DataPropertyName = "UltimoRegistro"
+        Me.UltimoRegistroDataGridViewTextBoxColumn.HeaderText = "Último Registro"
+        Me.UltimoRegistroDataGridViewTextBoxColumn.Name = "UltimoRegistroDataGridViewTextBoxColumn"
+        '
+        'NumeroFarmaciaDataGridViewTextBoxColumn
+        '
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DataPropertyName = "NumeroFarmacia"
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DataSource = Me.FarmaciaDatos
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.DisplayMember = "idFarmacia"
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.HeaderText = "Número Farmacia"
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.Name = "NumeroFarmaciaDataGridViewTextBoxColumn"
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.NumeroFarmaciaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'Administracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -921,13 +828,11 @@ Partial Class Administracion
         CType(Me.dgvPacientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpMedicamentos.ResumeLayout(False)
         CType(Me.dgvMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GrupoEquivalenciasDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpAmbulatorios.ResumeLayout(False)
         CType(Me.dgvAmbulatorios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpFarmacias.ResumeLayout(False)
         CType(Me.dgvFarmacias, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tpGrupoEquivalencias.ResumeLayout(False)
-        CType(Me.GrupoEquivalenciasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrupoEquivalenciasDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -966,6 +871,16 @@ Partial Class Administracion
     Friend WithEvents RecetaAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.RecetaAdaptador
     Friend WithEvents GrupoEquivalenciasDatos As System.Windows.Forms.BindingSource
     Friend WithEvents GrupoEquivalenciasAdaptador As RecetaElectronica.dbRecetaElectronicaTableAdapters.GrupoEquivalenciasAdaptador
+    Friend WithEvents CNMedicamentoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DenominacionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GrupoEquivalencia As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents DosisDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ViaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FormatoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NumeroEnvaseDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Posologia As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NumeroTarjetaSanitariaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ApellidosDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -996,22 +911,4 @@ Partial Class Administracion
     Friend WithEvents DNIDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents UltimoRegistroDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NumeroFarmaciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents tpGrupoEquivalencias As System.Windows.Forms.TabPage
-    Friend WithEvents GrupoEquivalenciasDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TableAdapterManager As RecetaElectronica.dbRecetaElectronicaTableAdapters.TableAdapterManager
-    Friend WithEvents CNMedicamentoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DenominacionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GrupoEquivalencia As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents DosisDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ViaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FormatoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NumeroEnvaseDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Posologia As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

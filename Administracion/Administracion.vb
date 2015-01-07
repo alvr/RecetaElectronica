@@ -1,16 +1,18 @@
 ﻿Public Class Administracion
 
     Private Sub Administracion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MedicoAdaptador.Fill(dbRecetaElectronica.Medico)
-        FarmaceuticoAdaptador.Fill(dbRecetaElectronica.Farmaceutico)
-        PacienteAdaptador.Fill(dbRecetaElectronica.Paciente)
-        MedicamentoAdaptador.Fill(dbRecetaElectronica.Medicamento)
-        GrupoEquivalenciasAdaptador.Fill(dbRecetaElectronica.GrupoEquivalencias)
-        AmbulatorioAdaptador.Fill(dbRecetaElectronica.Ambulatorio)
-        FarmaciaAdaptador.Fill(dbRecetaElectronica.Farmacia)
+        'TODO: esta línea de código carga datos en la tabla 'dbRecetaElectronica.GrupoEquivalencias' Puede moverla o quitarla según sea necesario.
+        Me.GrupoEquivalenciasAdaptador.Fill(Me.dbRecetaElectronica.GrupoEquivalencias)
+        Me.GrupoEquivalenciasAdaptador.Fill(Me.dbRecetaElectronica.GrupoEquivalencias)
+        Me.FarmaciaAdaptador.Fill(Me.dbRecetaElectronica.Farmacia)
+        Me.AmbulatorioAdaptador.Fill(Me.dbRecetaElectronica.Ambulatorio)
+        Me.MedicamentoAdaptador.Fill(Me.dbRecetaElectronica.Medicamento)
+        Me.PacienteAdaptador.Fill(Me.dbRecetaElectronica.Paciente)
+        Me.FarmaceuticoAdaptador.Fill(Me.dbRecetaElectronica.Farmaceutico)
+        Me.MedicoAdaptador.Fill(Me.dbRecetaElectronica.Medico)
     End Sub
 
-    Private Sub btnActDatos_Click(sender As Object, e As EventArgs) Handles btnActDatos.Click
+    Private Sub actDatos_Click(sender As Object, e As EventArgs) Handles btnActDatos.Click
         Dim tab = tcAdministracion.SelectedIndex
         Select Case tab
             Case 0
@@ -26,12 +28,9 @@
                 MedicamentoAdaptador.Update(dbRecetaElectronica.Medicamento)
                 MsgBox("Tabla de medicamentos actualizada.")
             Case 4
-                GrupoEquivalenciasAdaptador.Update(dbRecetaElectronica.GrupoEquivalencias)
-                MsgBox("Tabla de grupo de equivalencias actualizada.")
-            Case 5
                 AmbulatorioAdaptador.Update(dbRecetaElectronica.Ambulatorio)
                 MsgBox("Tabla de ambulatorios actualizada.")
-            Case 6
+            Case 5
                 FarmaciaAdaptador.Update(dbRecetaElectronica.Farmacia)
                 MsgBox("Tabla de farmacias actualizada.")
         End Select
