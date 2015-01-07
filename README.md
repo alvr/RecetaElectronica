@@ -16,3 +16,4 @@ Interfaz de usuario para la gestión de las recetas electrónicas por parte de l
  - Tener desbloqueado el puerto 3306.
  - Tener una cuenta en el sistema.
  - Adobe Reader o cualquier lector PDF.
+ - Servidor MySQL con la estructura del archivo [database.sql](https://github.com/alvr/RecetaElectronica/blob/master/Resources/database.sql "Estructura de la base de datos")
