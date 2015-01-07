@@ -676,8 +676,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class AdministradorDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of AdministradorRow)
         
         Private columnAdministrador As Global.System.Data.DataColumn
         
@@ -843,12 +842,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByAdministrador(ByVal Administrador As Integer) As AdministradorRow
             Return CType(Me.Rows.Find(New Object() {Administrador}),AdministradorRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1049,8 +1042,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class AmbulatorioDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of AmbulatorioRow)
         
         Private columnidAmbulatorio As Global.System.Data.DataColumn
         
@@ -1156,12 +1148,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByidAmbulatorio(ByVal idAmbulatorio As Integer) As AmbulatorioRow
             Return CType(Me.Rows.Find(New Object() {idAmbulatorio}),AmbulatorioRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1332,8 +1318,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class FarmaceuticoDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of FarmaceuticoRow)
         
         Private columnNumeroColegiado As Global.System.Data.DataColumn
         
@@ -1492,12 +1477,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByNumeroColegiado(ByVal NumeroColegiado As Integer) As FarmaceuticoRow
             Return CType(Me.Rows.Find(New Object() {NumeroColegiado}),FarmaceuticoRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1690,8 +1669,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class FarmaciaDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of FarmaciaRow)
         
         Private columnidFarmacia As Global.System.Data.DataColumn
         
@@ -1797,12 +1775,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByidFarmacia(ByVal idFarmacia As Integer) As FarmaciaRow
             Return CType(Me.Rows.Find(New Object() {idFarmacia}),FarmaciaRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1973,8 +1945,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class Farmacia_MedicamentoDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of Farmacia_MedicamentoRow)
         
         Private columnidFarmacia As Global.System.Data.DataColumn
         
@@ -2096,12 +2067,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByidFarmaciaCNMedicamento(ByVal idFarmacia As Integer, ByVal CNMedicamento As Integer) As Farmacia_MedicamentoRow
             Return CType(Me.Rows.Find(New Object() {idFarmacia, CNMedicamento}),Farmacia_MedicamentoRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2274,8 +2239,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class GrupoEquivalenciasDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of GrupoEquivalenciasRow)
         
         Private columnGrupoEquivalencias As Global.System.Data.DataColumn
         
@@ -2411,12 +2375,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByGrupoEquivalencias(ByVal GrupoEquivalencias As Integer) As GrupoEquivalenciasRow
             Return CType(Me.Rows.Find(New Object() {GrupoEquivalencias}),GrupoEquivalenciasRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2602,8 +2560,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class MedicamentoDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of MedicamentoRow)
         
         Private columnCNMedicamento As Global.System.Data.DataColumn
         
@@ -2792,12 +2749,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByCNMedicamento(ByVal CNMedicamento As Integer) As MedicamentoRow
             Return CType(Me.Rows.Find(New Object() {CNMedicamento}),MedicamentoRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3003,8 +2954,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class MedicoDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of MedicoRow)
         
         Private columnNumeroFacultativo As Global.System.Data.DataColumn
         
@@ -3203,12 +3153,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByNumeroFacultativo(ByVal NumeroFacultativo As Integer) As MedicoRow
             Return CType(Me.Rows.Find(New Object() {NumeroFacultativo}),MedicoRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3423,8 +3367,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class PacienteDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of PacienteRow)
         
         Private columnNumeroTarjetaSanitaria As Global.System.Data.DataColumn
         
@@ -3630,12 +3573,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByNumeroTarjetaSanitaria(ByVal NumeroTarjetaSanitaria As Integer) As PacienteRow
             Return CType(Me.Rows.Find(New Object() {NumeroTarjetaSanitaria}),PacienteRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3849,8 +3786,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class RecetaDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of RecetaRow)
         
         Private columnidReceta As Global.System.Data.DataColumn
         
@@ -3992,12 +3928,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByidReceta(ByVal idReceta As Integer) As RecetaRow
             Return CType(Me.Rows.Find(New Object() {idReceta}),RecetaRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4182,8 +4112,7 @@ Partial Public Class dbRecetaElectronica
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class Recetas_MedicoDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of Recetas_MedicoRow)
         
         Private columnidReceta As Global.System.Data.DataColumn
         
@@ -4292,12 +4221,6 @@ Partial Public Class dbRecetaElectronica
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByidRecetaNumeroFacultativo(ByVal idReceta As Integer, ByVal NumeroFacultativo As Integer) As Recetas_MedicoRow
             Return CType(Me.Rows.Find(New Object() {idReceta, NumeroFacultativo}),Recetas_MedicoRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8571,16 +8494,16 @@ Namespace dbRecetaElectronicaTableAdapters
             Me._commandCollection(1).Parameters.Add(param)
             Me._commandCollection(2) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT `Farmaceutico`.`NumeroColegiado` , `Farmaceutico`.`NumeroFarmacia` , `Farm" & _
-                "acia`.`idFarmacia` , `Farmacia_Medicamento`.`idFarmacia` , `Farmacia_Medicamento" & _
-                "`.`CNMedicamento` , `Farmacia_Medicamento`.`Stock` , `Medicamento`.`CNMedicament" & _
-                "o` , `Medicamento`.`Nombre` , `Medicamento`.`Denominacion` , `Medicamento`.`Grup" & _
-                "oEquivalencia` , `Medicamento`.`Dosis` , `Medicamento`.`Via` , `Medicamento`.`Fo" & _
-                "rmato` , `Medicamento`.`NumeroEnvase` , `Medicamento`.`Precio` FROM `DbIRyM`.`Fa" & _
-                "rmaceutico` INNER JOIN `DbIRyM`.`Farmacia` ON (`Farmaceutico`.`NumeroFarmacia` =" & _
-                " `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Farmacia_Medicamento` ON (`Farmac" & _
-                "ia_Medicamento`.`idFarmacia` = `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Med" & _
-                "icamento` ON (`Farmacia_Medicamento`.`CNMedicamento` = `Medicamento`.`CNMedicame" & _
+            Me._commandCollection(2).CommandText = "SELECT `Farmaceutico`.`NumeroColegiado` , `Farmaceutico`.`NumeroFarmacia` , `Farm"& _ 
+                "acia`.`idFarmacia` , `Farmacia_Medicamento`.`idFarmacia` , `Farmacia_Medicamento"& _ 
+                "`.`CNMedicamento` , `Farmacia_Medicamento`.`Stock` , `Medicamento`.`CNMedicament"& _ 
+                "o` , `Medicamento`.`Nombre` , `Medicamento`.`Denominacion` , `Medicamento`.`Grup"& _ 
+                "oEquivalencia` , `Medicamento`.`Dosis` , `Medicamento`.`Via` , `Medicamento`.`Fo"& _ 
+                "rmato` , `Medicamento`.`NumeroEnvase` , `Medicamento`.`Precio` FROM `DbIRyM`.`Fa"& _ 
+                "rmaceutico` INNER JOIN `DbIRyM`.`Farmacia` ON (`Farmaceutico`.`NumeroFarmacia` ="& _ 
+                " `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Farmacia_Medicamento` ON (`Farmac"& _ 
+                "ia_Medicamento`.`idFarmacia` = `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Med"& _ 
+                "icamento` ON (`Farmacia_Medicamento`.`CNMedicamento` = `Medicamento`.`CNMedicame"& _ 
                 "nto`) WHERE `Farmaceutico`.`NumeroColegiado` = @codigo"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()

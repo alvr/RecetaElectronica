@@ -131,13 +131,15 @@ Partial Class SobreRE
         '
         'tbDescripcion
         '
+        Me.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbDescripcion.Cursor = System.Windows.Forms.Cursors.Default
         Me.tbDescripcion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tbDescripcion.Enabled = False
         Me.tbDescripcion.Location = New System.Drawing.Point(136, 103)
         Me.tbDescripcion.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.tbDescripcion.Multiline = True
         Me.tbDescripcion.Name = "tbDescripcion"
         Me.tbDescripcion.ReadOnly = True
-        Me.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.tbDescripcion.Size = New System.Drawing.Size(257, 123)
         Me.tbDescripcion.TabIndex = 0
         Me.tbDescripcion.TabStop = False
