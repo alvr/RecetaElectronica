@@ -8,6 +8,7 @@ Interfaz de usuario para la gestión de las recetas electrónicas por parte de l
  - .NET Framework 2.0 o superior.
  - [MySQL .NET Connector](http://dev.mysql.com/downloads/connector/net/ "Connector/Net")
  - [MySQL for Visual Studio](http://dev.mysql.com/downloads/windows/visualstudio/ "MySQL for Visual Studio")
+ - Servidor MySQL con la estructura del archivo [database.sql](https://github.com/alvr/RecetaElectronica/blob/master/Resources/database.sql "Estructura de la base de datos")
 
 ###Requisitos de Uso
  - Windows XP o superior.
@@ -16,4 +17,3 @@ Interfaz de usuario para la gestión de las recetas electrónicas por parte de l
  - Tener desbloqueado el puerto 3306.
  - Tener una cuenta en el sistema.
  - Adobe Reader o cualquier lector PDF.
- - Servidor MySQL con la estructura del archivo [database.sql](https://github.com/alvr/RecetaElectronica/blob/master/Resources/database.sql "Estructura de la base de datos")
