@@ -1,9 +1,6 @@
 version: 1.0.{build}
+before_build:
+- ps: nuget restore
 build:
   project: RecetaElectronica.sln
   verbosity: minimal
-artifacts:
-- path: packages\MySql.Data.6.9.5
-  name: MySql.Data.6.9.5.nupkg
-before_deploy:
-- ps: Install-Package MySql.Data
