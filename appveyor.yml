@@ -2,3 +2,6 @@ version: 1.0.{build}
 build:
   project: RecetaElectronica.sln
   verbosity: minimal
+artifacts:
+- path: packages\MySql.Data.6.9.5
+  name: MySql.Data.6.9.5.nupkg

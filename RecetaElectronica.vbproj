@@ -97,14 +97,15 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\MySql.Data.6.9.5\lib\net20\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -288,6 +289,7 @@
     <None Include="dbRecetaElectronica.xss">
       <DependentUpon>dbRecetaElectronica.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="RecetaElectronica\app.manifest" />
     <None Include="RecetaElectronica\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
