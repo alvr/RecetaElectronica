@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Interfaz de usuario para la gestión de las recetas electrónicas por parte de los médicos, prescripción, y de los farmacéuticos, dispensación.")> 
 <Assembly: AssemblyCompany("alvr.me")> 
 <Assembly: AssemblyProduct("Receta Electrónica")> 
-<Assembly: AssemblyCopyright("© 2014 Álvaro S.")> 
+<Assembly: AssemblyCopyright("© 2014-2015 Álvaro S.")> 
 <Assembly: AssemblyTrademark("Receta Electrónica")> 
 
 <Assembly: ComVisible(False)> 
