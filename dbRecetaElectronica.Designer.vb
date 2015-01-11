@@ -8571,16 +8571,16 @@ Namespace dbRecetaElectronicaTableAdapters
             Me._commandCollection(1).Parameters.Add(param)
             Me._commandCollection(2) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT `Farmaceutico`.`NumeroColegiado` , `Farmaceutico`.`NumeroFarmacia` , `Farm" & _
-                "acia`.`idFarmacia` , `Farmacia_Medicamento`.`idFarmacia` , `Farmacia_Medicamento" & _
-                "`.`CNMedicamento` , `Farmacia_Medicamento`.`Stock` , `Medicamento`.`CNMedicament" & _
-                "o` , `Medicamento`.`Nombre` , `Medicamento`.`Denominacion` , `Medicamento`.`Grup" & _
-                "oEquivalencia` , `Medicamento`.`Dosis` , `Medicamento`.`Via` , `Medicamento`.`Fo" & _
-                "rmato` , `Medicamento`.`NumeroEnvase` , `Medicamento`.`Precio` FROM `DbIRyM`.`Fa" & _
-                "rmaceutico` INNER JOIN `DbIRyM`.`Farmacia` ON (`Farmaceutico`.`NumeroFarmacia` =" & _
-                " `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Farmacia_Medicamento` ON (`Farmac" & _
-                "ia_Medicamento`.`idFarmacia` = `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Med" & _
-                "icamento` ON (`Farmacia_Medicamento`.`CNMedicamento` = `Medicamento`.`CNMedicame" & _
+            Me._commandCollection(2).CommandText = "SELECT `Farmaceutico`.`NumeroColegiado` , `Farmaceutico`.`NumeroFarmacia` , `Farm"& _ 
+                "acia`.`idFarmacia` , `Farmacia_Medicamento`.`idFarmacia` , `Farmacia_Medicamento"& _ 
+                "`.`CNMedicamento` , `Farmacia_Medicamento`.`Stock` , `Medicamento`.`CNMedicament"& _ 
+                "o` , `Medicamento`.`Nombre` , `Medicamento`.`Denominacion` , `Medicamento`.`Grup"& _ 
+                "oEquivalencia` , `Medicamento`.`Dosis` , `Medicamento`.`Via` , `Medicamento`.`Fo"& _ 
+                "rmato` , `Medicamento`.`NumeroEnvase` , `Medicamento`.`Precio` FROM `DbIRyM`.`Fa"& _ 
+                "rmaceutico` INNER JOIN `DbIRyM`.`Farmacia` ON (`Farmaceutico`.`NumeroFarmacia` ="& _ 
+                " `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Farmacia_Medicamento` ON (`Farmac"& _ 
+                "ia_Medicamento`.`idFarmacia` = `Farmacia`.`idFarmacia`) INNER JOIN `DbIRyM`.`Med"& _ 
+                "icamento` ON (`Farmacia_Medicamento`.`CNMedicamento` = `Medicamento`.`CNMedicame"& _ 
                 "nto`) WHERE `Farmaceutico`.`NumeroColegiado` = @codigo"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()

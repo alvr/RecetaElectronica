@@ -1,5 +1,7 @@
 ![Logo Receta Electrónica](http://i.imgur.com/ol8Du2L.png "Logo") **Receta Electrónica**
 
+[![Build status](https://ci.appveyor.com/api/projects/status/s20gd6i7r1lw5a5d/branch/master?svg=true)](https://ci.appveyor.com/project/alvr/recetaelectronica/branch/master)
+
 ###Descripción
 Interfaz de usuario para la gestión de las recetas electrónicas por parte de los médicos, prescripción, y de los farmacéuticos, dispensación.
 
